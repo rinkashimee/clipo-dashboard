@@ -1,6 +1,18 @@
 {
   "sidebar": {
-    "logo": "Clipo AI"
+    "logo": "Clipo AI",
+    "overview": "Overview",
+    "projects": "Projects",
+    "clip-results": "Clip Results",
+    "analytics": "Analytics",
+    "templates": "Templates",
+    "epxort-history": "Export History",
+    "settings": "Settings",
+    "pro-plan": "Pro Plan 👑",
+    "desc": "You have unlimited exports and priority processing.",
+    "btn-upgrade": "Upgrade Plan",
+    "username": "Marcus Lee",
+    "email": "marcuslee@mail.com"
   },
   "overview": {
     "title": "Welcome back, Marcus!👋"

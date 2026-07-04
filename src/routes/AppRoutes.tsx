@@ -1,0 +1,21 @@
+import DashboardLayout from '@/layouts/DashboardLayout';
+import Overview from '@/pages/dashboard/Overview';
+import { Navigate, Route, Routes } from 'react-router-dom';
+
+export default function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<Navigate to="/overview" replace />} />
+
+      <Route element={<DashboardLayout />}>
+        <Route path="/overview" element={<Overview />} />
+        <Route path="/projects" element={<Overview />} />
+        <Route path="/clips-results" element={<Overview />} />
+        <Route path="/analytics" element={<Overview />} />
+        <Route path="/templates" element={<Overview />} />
+        <Route path="/export-history" element={<Overview />} />
+        <Route path="/settings" element={<Overview />} />
+      </Route>
+    </Routes>
+  );
+}
