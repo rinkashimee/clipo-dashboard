@@ -1,3 +1,4 @@
+import type { ChartDataTypes } from '@/types/ClipoChartTypes';
 import {
   Area,
   AreaChart,
@@ -6,16 +7,30 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  type TooltipProps,
 } from 'recharts';
+import type { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent';
+import type { AxisTick } from 'recharts/types/util/types';
 
-export default function ClipoChart() {
+interface ClipoChartProps {
+  color?: string;
+  chartData: ChartDataTypes[];
+  yAxisTickData?: AxisTick[];
+  tickFormatter?: (value: any, index: number) => string;
+  formatter?: TooltipProps<ValueType, NameType>['formatter'];
+  labelFormatter?: TooltipProps<ValueType, NameType>['labelFormatter'];
+}
+
+export default function ClipoChart(props: ClipoChartProps) {
+  const { chartData, color, yAxisTickData, tickFormatter, formatter, labelFormatter } = props;
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart data={chartData}>
         <defs>
           <linearGradient id="viewsGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor={colors.primary500} stopOpacity={0.25} />
-            <stop offset="100%" stopColor={colors.primary500} stopOpacity={0} />
+            <stop offset="0%" stopColor={color} stopOpacity={0.25} />
+            <stop offset="100%" stopColor={color} stopOpacity={0} />
           </linearGradient>
         </defs>
 
@@ -33,32 +48,29 @@ export default function ClipoChart() {
           axisLine={false}
           tickLine={false}
           tickMargin={12}
-          ticks={[0, 10000, 20000, 30000]}
+          ticks={yAxisTickData}
           tick={{ fill: 'var(--neutral-400)', fontSize: 12, fontWeight: 500 }}
-          tickFormatter={(value) => (value === 0 ? '0' : `${value / 1000}K`)}
+          tickFormatter={tickFormatter}
         />
 
-        <Tooltip
-          formatter={(value) => [`${value?.toLocaleString()}`, 'Views']}
-          labelFormatter={() => ''}
-        />
+        <Tooltip formatter={formatter} labelFormatter={labelFormatter} />
 
         <Area
           type="monotone"
           dataKey="views"
-          stroke={colors.primary500}
+          stroke={color}
           strokeWidth={3}
           fill="url(#viewsGradient)"
           fillOpacity={1}
           dot={{
             r: 4,
-            fill: colors.primary500,
-            stroke: colors.primary500,
+            fill: color,
+            stroke: color,
             strokeWidth: 2,
           }}
           activeDot={{
             r: 6,
-            fill: colors.primary500,
+            fill: color,
             stroke: '#fff',
             strokeWidth: 2,
           }}

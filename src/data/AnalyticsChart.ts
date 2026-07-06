@@ -1,6 +1,6 @@
-import type { AnalyticsDataTypes } from '@/types/OverViewTypes';
+import type { ChartDataTypes } from '@/types/ClipoChartTypes';
 
-export function analyticsChartData(): AnalyticsDataTypes[] {
+export function analyticsChartData(): ChartDataTypes[] {
   return [
     { date: 'May 10', views: 12000 },
     { date: '', views: 14500 },

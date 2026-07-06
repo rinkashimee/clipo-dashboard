@@ -32,11 +32,6 @@ export interface AnalyticsSummaryTypes {
   trend: 'up' | 'down';
 }
 
-export interface AnalyticsDataTypes {
-  date: string;
-  views: number;
-}
-
 export interface PerformingClipTypes {
   id: number;
   thumbnail: string;
