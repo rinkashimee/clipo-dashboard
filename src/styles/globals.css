@@ -176,4 +176,45 @@ html {
   .card-shadow {
     box-shadow: 0 0 30px rgba(15, 23, 42, 0.15);
   }
+
+  .border-default {
+    border: 1px solid rgba(145, 148, 157, 0.5);
+  }
+
+  .shadow-default {
+    box-shadow: 0 8px 24px 0 rgb(15 23 42 / 5%);
+  }
+
+  .table-b-border {
+    border-bottom: 1px solid rgba(145, 148, 157, 0.2);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
 }

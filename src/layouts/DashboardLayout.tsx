@@ -3,10 +3,10 @@ import Sidebar from '@/components/sidebar/Sidebar';
 
 export default function DashboardLayout() {
   return (
-    <div className="flex min-h-screen bg-[var(--neutral-50)]">
+    <div className="flex h-screen overflow-hidden bg-[var(--neutral-50)]">
       <Sidebar />
 
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 xl:px-3 xl:py-1 2xl:px-5 2xl:py-3 overflow-hidden">
         <Outlet />
       </main>
     </div>

@@ -90,6 +90,7 @@ import {
   TiktokLogoIcon,
   TwitterLogoIcon,
   WarningCircleIcon,
+  TrendDownIcon,
 } from '@phosphor-icons/react';
 
 const icons = {
@@ -183,6 +184,7 @@ const icons = {
   TiktokLogoIcon,
   TwitterLogoIcon,
   WarningCircleIcon,
+  TrendDownIcon,
 } satisfies Record<string, Icon>;
 
 export type IconType = keyof typeof icons;

@@ -19,7 +19,7 @@ export default function SidebarItem(props: SidebarItemProps) {
     <NavLink
       to={path}
       className={clsx(
-        'flex items-center gap-3 px-4 py-3 rounded-lg transition-colors',
+        'flex items-center gap-3 py-3 xl:px-3 2xl:px-4 rounded-lg transition-colors',
         isActive ? 'bg-[var(--primary-400)] text-white' : 'hover:bg-[var(--primary-400)]'
       )}
     >

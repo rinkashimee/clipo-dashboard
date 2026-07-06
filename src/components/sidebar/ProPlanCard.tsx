@@ -6,7 +6,7 @@ export default function ProPlanCard() {
   const { t } = useTranslation();
 
   return (
-    <div className="card-border card-shadow rounded-2xl bg-[var(--neutral-500)] p-[18px] ">
+    <div className="card-border card-shadow rounded-2xl bg-[var(--neutral-500)] xl:p-4 2xl:p-[18px]">
       <Typography as="span" variant="body-md" color="neutral50" cursor="default">
         {t('sidebar.pro-plan')}
       </Typography>

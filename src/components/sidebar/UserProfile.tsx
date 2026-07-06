@@ -8,7 +8,7 @@ export default function UserProfile() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex items-center justify-between rounded-xl px-3 py-2 transition-colors hover:bg-neutral-900/40">
+    <div className="flex items-center justify-between border-t border-[rgba(231,232,234,0.08)] px-[10px] pt-4 pb-[10px] transition-colors hover:bg-neutral-900/40">
       <div className="flex items-center gap-3">
         <div className="relative">
           <div className="h-10 w-10 rounded-full ">
