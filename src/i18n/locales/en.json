@@ -37,6 +37,14 @@
     "uploaded-at-6": "Uploaded 7 days ago • 28:30",
     "project-title-7": "Social Media Growth Hacks",
     "uploaded-at-7": "Uploaded 8 days ago • 36:45",
+    "project-title-8": "AI Content Strategy for Beginners",
+    "uploaded-at-8": "Uploaded 9 days ago • 22:18",
+    "project-title-9": "YouTube Shorts Editing Workflow",
+    "uploaded-at-9": "Uploaded 10 days ago • 41:52",
+    "project-title-10": "Mastering Viral Video Hooks",
+    "uploaded-at-10": "Uploaded 11 days ago • 18:27",
+    "project-title-11": "Podcast to Short Clips with AI",
+    "uploaded-at-11": "Uploaded 13 days ago • 54:03",
     "recent-project": "Recent Projects",
     "view-all": "View All",
     "analytics-overview": "Analytics Overview",
@@ -58,5 +66,11 @@
     "clip8-title": "How I automate 80% of my content workflow.",
     "clip9-title": "Youre Doing Productivity Wrong.",
     "clip10-title": "Most People Ignore This Productivity Trick."
+  },
+  "projects": {
+    "title": "Projects",
+    "caption": "Manage all your uploaded videos and their processing status.",
+    "search-projects": "Search projects...",
+    "showing": "Showing {{count}} of {{total}} projects"
   }
 }

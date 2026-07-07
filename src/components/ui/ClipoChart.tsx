@@ -1,4 +1,4 @@
-import type { ChartDataTypes } from '@/types/ClipoChartTypes';
+import type { ChartDataTypes } from '@/types/ClipoCommonTypes';
 import {
   Area,
   AreaChart,

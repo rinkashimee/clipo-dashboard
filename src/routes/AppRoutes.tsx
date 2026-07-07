@@ -1,5 +1,6 @@
 import DashboardLayout from '@/layouts/DashboardLayout';
 import Overview from '@/pages/dashboard/Overview';
+import Projects from '@/pages/dashboard/Projects';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 export default function AppRoutes() {
@@ -9,7 +10,7 @@ export default function AppRoutes() {
 
       <Route element={<DashboardLayout />}>
         <Route path="/overview" element={<Overview />} />
-        <Route path="/projects" element={<Overview />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/clips-results" element={<Overview />} />
         <Route path="/analytics" element={<Overview />} />
         <Route path="/templates" element={<Overview />} />

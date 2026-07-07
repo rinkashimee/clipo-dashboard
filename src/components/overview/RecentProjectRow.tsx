@@ -1,4 +1,4 @@
-import ProjectStatusBadge from '../ui/StatusBadge';
+import StatusBadge from '../ui/StatusBadge';
 import type { RecentProjectTypes } from '@/types/OverViewTypes';
 import { Typography } from '../ui/Typography';
 import { Button } from '../ui/Button';
@@ -10,7 +10,7 @@ interface Props {
 
 export default function RecentProjectRow({ project }: Props) {
   return (
-    <div className="flex items-center justify-between py-[10px] border-b table-b-border transition hover:bg-neutral-50">
+    <div className="table-b-border flex items-center justify-between border-b py-[10px] transition hover:bg-neutral-50">
       <div className="flex items-center gap-4">
         <div className="h-[50px] w-[88px] overflow-hidden rounded-lg">
           <img src={project.thumbnail} alt={project.title} className="object-cover" />
@@ -28,14 +28,14 @@ export default function RecentProjectRow({ project }: Props) {
       </div>
 
       <div className="flex items-center gap-10">
-        <ProjectStatusBadge status={project.status} showIcon={true} />
+        <StatusBadge status={project.status} showIcon={true} />
 
         <Button
           size={18}
           variant="custom"
           color={colors.neutral700}
           icon="DotsThreeVerticalIcon"
-          className="flex h-8 w-8 items-center justify-center rounded-md border border-default bg-white cursor-pointer transition-colors hover:bg-neutral-50"
+          className="border-default flex h-8 w-8 cursor-pointer items-center justify-center rounded-md border bg-white transition-colors hover:bg-neutral-50"
         ></Button>
       </div>
     </div>

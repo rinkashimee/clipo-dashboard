@@ -22,14 +22,21 @@ export function Button({
   icon,
   className,
   children,
+  disabled,
   ...props
 }: ButtonProps) {
   const iconElement = icon && <ClipIcons icon={icon} size={size} color={color} />;
 
   return (
     <button
+      disabled={disabled}
       className={clsx(
         variant !== 'custom' && 'btn-base',
+        variant === 'custom' && [
+          'disabled:opacity-50',
+          'disabled:cursor-not-allowed',
+          'disabled:pointer-events-none',
+        ],
         {
           'btn-primary': variant === 'primary',
           'btn-secondary': variant === 'secondary', //TODO: Need apply styles..

@@ -163,6 +163,12 @@ html {
     background-color: var(--primary-400);
     color: var(--neutral-50);
   }
+
+  .btn-base:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
 
 @layer components {

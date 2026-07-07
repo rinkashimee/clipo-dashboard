@@ -16,7 +16,7 @@ export default function ProPlanCard() {
       </Typography>
 
       <Button className="mt-[14px] w-full">
-        <Typography variant="body-md" color="neutral50" cursor="default">
+        <Typography variant="body-md" color="neutral50" cursor="pointer">
           {t('sidebar.btn-upgrade')}
         </Typography>
       </Button>

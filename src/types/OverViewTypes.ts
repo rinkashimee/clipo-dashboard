@@ -1,7 +1,6 @@
 import type { IconType } from '@/components/icons/ClipIcons';
 import type { Icon } from '@phosphor-icons/react';
-
-export type StatusBadgeTypes = 'processing' | 'ready' | 'exported';
+import type { StatusBadgeTypes } from './ClipoCommonTypes';
 
 export interface RecentProjectTypes {
   id: number;

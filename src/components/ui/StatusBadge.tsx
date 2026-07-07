@@ -1,8 +1,8 @@
-import type { StatusBadgeTypes } from '@/types/OverViewTypes';
 import clsx from 'clsx';
 import { Typography } from './Typography';
 import { colors, type Color } from '@/lib/colors/colors';
 import { ClipIcons, type IconType } from '../icons/ClipIcons';
+import type { StatusBadgeTypes } from '@/types/ClipoCommonTypes';
 
 interface StatusBadgeProps {
   status: StatusBadgeTypes;
@@ -40,6 +40,13 @@ const statusConfig: Record<
     icon: 'CheckIcon',
     iconSize: 13.5,
   },
+  failed: {
+    label: 'Failed',
+    textColor: 'error500',
+    className: 'bg-[var(--error-100)]',
+    icon: 'XIcon',
+    iconSize: 13.5,
+  },
 };
 
 export default function StatusBadge({ status, showIcon = false }: StatusBadgeProps) {
@@ -53,10 +60,10 @@ export default function StatusBadge({ status, showIcon = false }: StatusBadgePro
       cursor="default"
       className={clsx('inline-flex items-center gap-2 rounded px-[10px] py-2', config.className)}
     >
-      {config.label}
       {showIcon == true && (
         <ClipIcons icon={config.icon} size={config.iconSize} color={colors[config.textColor]} />
       )}
+      {config.label}
     </Typography>
   );
 }
