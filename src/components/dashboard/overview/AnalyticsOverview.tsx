@@ -2,8 +2,8 @@ import { analyticsData } from '@/hooks/overview/Analytics';
 import AnalyticsChart from './AnalyticsChart';
 import AnalyticsSummaryCard from './AnalyticsSummaryCard';
 import { useTranslation } from 'react-i18next';
-import { Typography } from '../ui/Typography';
-import { Button } from '../ui/Button';
+import { Typography } from '../../ui/Typography';
+import { Button } from '../../ui/Button';
 import { colors } from '@/lib/colors/colors';
 
 export default function AnalyticsOverview() {

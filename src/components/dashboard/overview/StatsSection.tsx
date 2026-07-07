@@ -1,4 +1,4 @@
-import StatsCard from '../ui/StatsCard';
+import StatsCard from '../../ui/StatsCard';
 import { overViewStatCardData } from '@/hooks/overview/OverViewStatCard';
 
 export default function StatsSection() {

@@ -1,7 +1,7 @@
 import type { PerformingClipTypes } from '@/types/OverViewTypes';
 import { useTranslation } from 'react-i18next';
-import { Typography } from '../ui/Typography';
-import { ClipIcons } from '../icons/ClipIcons';
+import { Typography } from '../../ui/Typography';
+import { ClipIcons } from '../../icons/ClipIcons';
 import { colors } from '@/lib/colors/colors';
 
 interface ClipCardProps {

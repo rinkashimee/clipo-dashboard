@@ -1,6 +1,6 @@
 import { analyticsChartData } from '@/data/AnalyticsChart';
 import { colors } from '@/lib/colors/colors';
-import ClipoChart from '../ui/ClipoChart';
+import ClipoChart from '../../ui/ClipoChart';
 
 export default function AnalyticsChart() {
   const chartData = analyticsChartData();

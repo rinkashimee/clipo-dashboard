@@ -1,8 +1,8 @@
 import DashboardHeader from '@/components/header/DashboardHeader';
-import AnalyticsOverview from '@/components/overview/AnalyticsOverview';
-import RecentProjects from '@/components/overview/RecentProject';
-import StatsSection from '@/components/overview/StatsSection';
-import TopPerformingClips from '@/components/overview/TopPerformingClips';
+import AnalyticsOverview from '@/components/dashboard/overview/AnalyticsOverview';
+import RecentProjects from '@/components/dashboard/overview/RecentProject';
+import StatsSection from '@/components/dashboard/overview/StatsSection';
+import TopPerformingClips from '@/components/dashboard/overview/TopPerformingClips';
 import { useTranslation } from 'react-i18next';
 
 export default function Overview() {

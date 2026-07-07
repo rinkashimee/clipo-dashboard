@@ -1,7 +1,7 @@
-import StatusBadge from '../ui/StatusBadge';
+import StatusBadge from '../../ui/StatusBadge';
 import type { RecentProjectTypes } from '@/types/OverViewTypes';
-import { Typography } from '../ui/Typography';
-import { Button } from '../ui/Button';
+import { Typography } from '../../ui/Typography';
+import { Button } from '../../ui/Button';
 import { colors } from '@/lib/colors/colors';
 
 interface Props {

@@ -1,8 +1,8 @@
 import { recentProjectData } from '@/hooks/overview/RecentProject';
 import RecentProjectRow from './RecentProjectRow';
 import { useTranslation } from 'react-i18next';
-import { Typography } from '../ui/Typography';
-import { Button } from '../ui/Button';
+import { Typography } from '../../ui/Typography';
+import { Button } from '../../ui/Button';
 import { useNavigate } from 'react-router-dom';
 
 export default function RecentProjects() {

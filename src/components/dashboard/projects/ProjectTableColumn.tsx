@@ -1,9 +1,9 @@
 import type { TableColumn } from '@/types/ClipoCommonTypes';
-import StatusBadge from '../ui/StatusBadge';
 import type { ProjectTypes } from '@/types/ProjectTypes';
-import { Typography } from '../ui/Typography';
-import { Button } from '../ui/Button';
 import { colors } from '@/lib/colors/colors';
+import StatusBadge from '@/components/ui/StatusBadge';
+import { Typography } from '@/components/ui/Typography';
+import { Button } from '@/components/ui/Button';
 
 export const projectColumns: TableColumn<ProjectTypes>[] = [
   {

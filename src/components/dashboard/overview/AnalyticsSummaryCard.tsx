@@ -1,6 +1,6 @@
 import type { AnalyticsSummaryTypes } from '@/types/OverViewTypes';
-import { Typography } from '../ui/Typography';
-import { ClipIcons } from '../icons/ClipIcons';
+import { Typography } from '../../ui/Typography';
+import { ClipIcons } from '../../icons/ClipIcons';
 
 interface AnalyticsSummaryCardProps {
   summary: AnalyticsSummaryTypes;
@@ -10,7 +10,7 @@ export default function AnalyticsSummaryCard({ summary }: AnalyticsSummaryCardPr
   const isPositive = summary.trend === 'up';
 
   return (
-    <div className="rounded-xl border border-default shadow-default xl:p-3 2xl:p-4 gap-2">
+    <div className="border-default shadow-default gap-2 rounded-xl border xl:p-3 2xl:p-4">
       <Typography
         variant="caption"
         color="neutral500"

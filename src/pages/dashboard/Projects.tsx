@@ -1,5 +1,5 @@
 import DashboardHeader from '@/components/header/DashboardHeader';
-import { projectColumns } from '@/components/projects/ProjectTableColumn';
+import { projectColumns } from '@/components/dashboard/projects/ProjectTableColumn';
 import Table from '@/components/ui/table/Table';
 import Toolbar from '@/components/ui/Toolbar';
 import { STATUS_OPTIONS } from '@/constants/ConstantData';
