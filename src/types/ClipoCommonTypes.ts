@@ -7,8 +7,8 @@ export interface ChartDataTypes {
   views: number;
 }
 
-export interface StatusOptionTypes {
-  label: string;
+export interface OptionTypes {
+  label: ReactNode;
   value: string;
 }
 
@@ -26,4 +26,11 @@ export interface TablePaginationTypes {
   pageSize: number;
   total: number;
   onChange?: (page: number) => void;
+}
+
+export interface TabItemTypes {
+  key: string;
+  label: ReactNode;
+  disabled?: boolean;
+  children?: ReactNode;
 }

@@ -60,7 +60,7 @@
     "clip2-title": "The biggest mistake people make with AI tools.",
     "clip3-title": "This AI tool saved me 10+ hours every week.",
     "clip4-title": "The future belongs to creators, not just workers.",
-    "clip5-title": "How to future-proof your career with AI",
+    "clip5-title": "How to future-proof your career with AI.",
     "clip6-title": "AI wont replace you, but those using it will.",
     "clip7-title": "3 AI tools every creator should be using.",
     "clip8-title": "How I automate 80% of my content workflow.",
@@ -72,5 +72,15 @@
     "caption": "Manage all your uploaded videos and their processing status.",
     "search-projects": "Search projects...",
     "showing": "Showing {{count}} of {{total}} projects"
+  },
+  "clip-results": {
+    "title": "Clip Results",
+    "caption": "Review and manage clips generated from your videos.",
+    "back-to-projects": "Back to Projects",
+    "search-clips": "Search clips...",
+    "sort-by": "Sort By:",
+    "all-clips": "All Clips ({{count}})",
+    "high-score": "High Score ({{count}})",
+    "ready-to-export": "Ready to Export ({{count}})"
   }
 }

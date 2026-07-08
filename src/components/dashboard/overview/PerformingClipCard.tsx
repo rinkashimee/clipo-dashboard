@@ -4,11 +4,11 @@ import { Typography } from '../../ui/Typography';
 import { ClipIcons } from '../../icons/ClipIcons';
 import { colors } from '@/lib/colors/colors';
 
-interface ClipCardProps {
+interface PerformingClipCardProps {
   clip: PerformingClipTypes;
 }
 
-export default function ClipCard({ clip }: ClipCardProps) {
+export default function PerformingClipCard({ clip }: PerformingClipCardProps) {
   const { t } = useTranslation();
 
   return (

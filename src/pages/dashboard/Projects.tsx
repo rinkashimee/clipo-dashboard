@@ -1,7 +1,7 @@
 import DashboardHeader from '@/components/header/DashboardHeader';
 import { projectColumns } from '@/components/dashboard/projects/ProjectTableColumn';
 import Table from '@/components/ui/table/Table';
-import Toolbar from '@/components/ui/Toolbar';
+import Toolbar from '@/components/ui/toolbar/Toolbar';
 import { STATUS_OPTIONS } from '@/constants/ConstantData';
 import { projectTableData } from '@/hooks/projects/ProjectTableData';
 import { useMemo, useState } from 'react';
@@ -47,7 +47,7 @@ export default function Projects() {
       <main className="mt-1 xl:mt-1 2xl:mt-2">
         <Toolbar
           search={search}
-          status={status}
+          dropdownValue={status}
           dropdownData={STATUS_OPTIONS}
           searchPlaceholder={t('projects.search-projects')}
           onSearchChange={setSearch}

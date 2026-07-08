@@ -35,6 +35,9 @@ export interface PerformingClipTypes {
   id: number;
   thumbnail: string;
   title: string;
-  views: string;
   viralScore: number;
+  status: StatusBadgeTypes;
+  views: number;
+  likes: number;
+  shares: number;
 }

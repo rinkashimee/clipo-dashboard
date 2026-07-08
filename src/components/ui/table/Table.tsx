@@ -32,21 +32,23 @@ export default function Table<T>(props: TableProps<T>) {
           }}
         >
           <thead>
-            {columns.map((column) => (
-              <th
-                key={column.key}
-                style={{ width: column.width }}
-                className={clsx(
-                  'table-b-border body-sm sticky top-0 bg-[#F3F3F4] px-4 py-3 text-left text-[var(--neutral-500)] xl:px-8 xl:py-[18px] 2xl:px-8 2xl:py-5',
-                  {
-                    'text-center': column.align === 'center',
-                    'text-right': column.align === 'right',
-                  }
-                )}
-              >
-                {column.title}
-              </th>
-            ))}
+            <tr>
+              {columns.map((column) => (
+                <th
+                  key={column.key}
+                  style={{ width: column.width }}
+                  className={clsx(
+                    'table-b-border body-sm sticky top-0 bg-[#F3F3F4] px-4 py-3 text-left text-[var(--neutral-500)] xl:px-8 xl:py-[18px] 2xl:px-8 2xl:py-5',
+                    {
+                      'text-center': column.align === 'center',
+                      'text-right': column.align === 'right',
+                    }
+                  )}
+                >
+                  {column.title}
+                </th>
+              ))}
+            </tr>
           </thead>
 
           <tbody>

@@ -6,10 +6,11 @@ import UserAvatar from './UserAvatar';
 interface DashboardHeaderProps {
   title: string;
   caption: string;
+  hideCreateBtn?: boolean;
 }
 
 export default function DashboardHeader(props: DashboardHeaderProps) {
-  const { title, caption } = props;
+  const { title, caption, hideCreateBtn = false } = props;
 
   return (
     <header className="flex items-center justify-between">
@@ -24,7 +25,7 @@ export default function DashboardHeader(props: DashboardHeaderProps) {
       </div>
 
       <div className="flex items-center gap-4">
-        <CreateProjectButton />
+        {!hideCreateBtn && <CreateProjectButton />}
         <NotificationButton />
         <UserAvatar />
       </div>

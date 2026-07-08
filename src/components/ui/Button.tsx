@@ -12,6 +12,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   iconPosition?: IconPosition;
   size?: number;
   color?: string;
+  iconClassName?: string;
 }
 
 export function Button({
@@ -21,11 +22,14 @@ export function Button({
   iconPosition = 'left',
   icon,
   className,
+  iconClassName,
   children,
   disabled,
   ...props
 }: ButtonProps) {
-  const iconElement = icon && <ClipIcons icon={icon} size={size} color={color} />;
+  const iconElement = icon && (
+    <ClipIcons icon={icon} size={size} color={color} className={iconClassName} />
+  );
 
   return (
     <button
