@@ -6,6 +6,7 @@ export interface RecentProjectTypes {
   id: number;
   thumbnail: string;
   title: string;
+  duration: string;
   uploadedAt: string;
   status: StatusBadgeTypes;
 }
@@ -35,6 +36,7 @@ export interface PerformingClipTypes {
   id: number;
   thumbnail: string;
   title: string;
+  duration: string;
   viralScore: number;
   status: StatusBadgeTypes;
   views: number;

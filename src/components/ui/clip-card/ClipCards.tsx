@@ -12,8 +12,14 @@ interface ClipCardsProps {
 export default function ClipCards({ clip }: ClipCardsProps) {
   return (
     <div className="border-default shadow-default flex h-full flex-col overflow-hidden rounded-2xl bg-white transition-all hover:scale-105">
-      <div className="overflow-hidden">
+      <div className="relative overflow-hidden">
         <img src={clip.thumbnail} alt={clip.title} className="aspect-video w-full object-cover" />
+
+        <div className="absolute right-3 bottom-3 rounded-md bg-black/70 px-2 py-1">
+          <Typography variant="body-sm" color="white" cursor="default">
+            {clip.duration}
+          </Typography>
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col p-3">
