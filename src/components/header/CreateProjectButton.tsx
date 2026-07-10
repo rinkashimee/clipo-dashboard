@@ -6,8 +6,8 @@ export default function CreateProjectButton() {
   const { t } = useTranslation();
 
   return (
-    <Button variant="primary" icon="PlusIcon">
-      <Typography variant="body-md" color="neutral50" cursor="pointer">
+    <Button variant="primary" size={18} icon="PlusIcon">
+      <Typography variant="body-sm" color="neutral50" cursor="pointer">
         {t('overview.new-btn')}
       </Typography>
     </Button>

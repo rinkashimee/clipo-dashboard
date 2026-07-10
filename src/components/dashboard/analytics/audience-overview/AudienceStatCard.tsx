@@ -1,23 +1,22 @@
-import type { StatCardTypes } from '@/types/OverViewTypes';
-import type { ReactNode } from 'react';
-import { ClipIcons } from '../icons/ClipIcons';
-import { Typography } from './Typography';
+import { ClipIcons } from '@/components/icons/ClipIcons';
+import { Typography } from '@/components/ui/Typography';
+import type { AudienceStatCardTypes } from '@/types/AnalyticsTypes';
 
-interface StatsCardProps {
-  stat: StatCardTypes;
-  dateFilter?: ReactNode;
+interface AudienceOverviewCardProps {
+  stat: AudienceStatCardTypes;
 }
 
-export default function StatsCard({ stat, dateFilter }: StatsCardProps) {
+export default function AudienceStatsCard({ stat }: AudienceOverviewCardProps) {
   const isPositive = stat.trend === 'up';
+
   return (
-    <div className="border-default shadow-default rounded-xl border bg-white xl:p-5 2xl:p-6">
+    <div className="border-default shadow-default rounded-xl border bg-white px-4 xl:py-2 2xl:py-3">
       <div className="flex items-start gap-4">
         <div
-          className={'flex h-14 w-14 items-center justify-center rounded-full'}
+          className={'flex h-9 w-9 items-center justify-center rounded-full'}
           style={{ backgroundColor: stat.iconBg }}
         >
-          <ClipIcons size={24} icon={stat.icon} color={stat.iconColor} weight={stat.iconWeight} />
+          <ClipIcons size={18} icon={stat.icon} color={stat.iconColor} weight={stat.iconWeight} />
         </div>
 
         <div className="flex-1">
@@ -25,8 +24,8 @@ export default function StatsCard({ stat, dateFilter }: StatsCardProps) {
             {stat.title}
           </Typography>
 
-          <div className="mt-2 flex items-center gap-3">
-            <Typography as="h2" variant="h2" color="neutral900" cursor="default">
+          <div className="mt-1 flex items-center gap-3">
+            <Typography variant="body-md" color="neutral900" cursor="default">
               {stat.value}
             </Typography>
 
@@ -45,10 +44,6 @@ export default function StatsCard({ stat, dateFilter }: StatsCardProps) {
               {stat.change}
             </Typography>
           </div>
-
-          <Typography variant="caption" color="neutral500" cursor="default" className="mt-2">
-            {dateFilter ?? stat.subtitle}
-          </Typography>
         </div>
       </div>
     </div>

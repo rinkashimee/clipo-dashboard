@@ -6,7 +6,7 @@ export default function DashboardLayout() {
     <div className="flex h-screen overflow-hidden bg-[var(--neutral-50)]">
       <Sidebar />
 
-      <main className="flex-1 xl:px-3 xl:py-1 2xl:px-5 2xl:py-3 overflow-hidden">
+      <main className="flex-1 overflow-hidden xl:px-3 xl:py-1 2xl:px-5 2xl:py-3">
         <Outlet />
       </main>
     </div>

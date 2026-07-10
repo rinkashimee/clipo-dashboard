@@ -8,7 +8,7 @@ export function analyticsData(): AnalyticsSummaryTypes[] {
   return [
     {
       id: 1,
-      title: t('overview.total-views'),
+      title: t('common.total-views'),
       value: '45.2K',
       change: '+23.5%',
       icon: 'EyeIcon',
@@ -18,7 +18,7 @@ export function analyticsData(): AnalyticsSummaryTypes[] {
     },
     {
       id: 2,
-      title: t('overview.engagement'),
+      title: t('common.engagement'),
       value: '8.7K',
       change: '+19.2%',
       icon: 'HeartIcon',
@@ -28,7 +28,7 @@ export function analyticsData(): AnalyticsSummaryTypes[] {
     },
     {
       id: 3,
-      title: t('overview.watch-time'),
+      title: t('common.watch-time'),
       value: '56%',
       change: '-11.8%',
       icon: 'TrendUpIcon',

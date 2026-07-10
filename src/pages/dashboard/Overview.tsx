@@ -12,7 +12,7 @@ export default function Overview() {
     <>
       <DashboardHeader title={t('overview.title')} caption={t('overview.desc')} />
 
-      <main className="xl:mt-1 2xl:mt-2">
+      <main className="mt-1 xl:mt-1 2xl:mt-2">
         <StatsSection />
 
         <div className="mt-2 grid grid-cols-2 gap-2">

@@ -14,6 +14,26 @@
     "username": "Marcus Lee",
     "email": "marcuslee@mail.com"
   },
+  "common": {
+    "total-views": "Total Views",
+    "engagement": "Engagement",
+    "watch-time": "Watch Time",
+    "youtube": "YouTube",
+    "instagram": "Instagram",
+    "tiktok": "Tiktok",
+    "twitter": "Twitter",
+    "other": "Other",
+    "india": "India",
+    "us": "United States",
+    "uk": "United Kingdom",
+    "canada": "Canada",
+    "australia": "Australia",
+    "mobile": "Mobile",
+    "tablet": "Tablet",
+    "desktop": "Desktop",
+    "male": "Male",
+    "female": "Female"
+  },
   "overview": {
     "title": "Welcome back, Marcus!👋",
     "desc": "Here's what's happening with your content today.",
@@ -49,9 +69,6 @@
     "view-all": "View All",
     "analytics-overview": "Analytics Overview",
     "last-7days": "Last 7 days",
-    "total-views": "Total Views",
-    "engagement": "Engagement",
-    "watch-time": "Watch Time",
     "top-performing-clips": "Top Performing Clips",
     "viral-score": "Viral Score"
   },
@@ -82,5 +99,23 @@
     "all-clips": "All Clips ({{count}})",
     "high-score": "High Score ({{count}})",
     "ready-to-export": "Ready to Export ({{count}})"
+  },
+  "analytics": {
+    "title": "Analytics",
+    "caption": "Track your content preformance and growth.",
+    "export-report": "Export Report",
+    "views": "Views",
+    "engagement": "Engagement",
+    "avg-watch-time": "Avg. Watch Time",
+    "shares": "Shares",
+    "views-over-time": "Views Over Time",
+    "engagement-over-time": "Engagement Over Time",
+    "traffic-source": "Traffic Source",
+    "audience-overview": "Audience Overview",
+    "total-audience": "Total Audience",
+    "new-audience": "New Audience",
+    "top-countries": "Top Countries",
+    "top-device": "Top Device",
+    "prev-period": "Previous Period"
   }
 }

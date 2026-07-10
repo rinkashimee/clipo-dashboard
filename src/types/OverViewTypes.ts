@@ -12,13 +12,16 @@ export interface RecentProjectTypes {
 }
 
 export interface StatCardTypes {
+  id: number;
   title: string;
   value: string | number;
   change: string;
-  subtitle: string;
+  subtitle?: string;
   icon: IconType;
   iconBg: string;
   iconColor: string;
+  iconWeight: React.ComponentProps<Icon>['weight'];
+  trend: 'up' | 'down';
 }
 
 export interface AnalyticsSummaryTypes {

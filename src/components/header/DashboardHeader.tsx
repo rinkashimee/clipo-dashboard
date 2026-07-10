@@ -1,4 +1,6 @@
+import type { OptionTypes } from '@/types/ClipoCommonTypes';
 import { Typography } from '../ui/Typography';
+import AnalyticsButton from './AnalyticsButton';
 import CreateProjectButton from './CreateProjectButton';
 import NotificationButton from './NotificationButton';
 import UserAvatar from './UserAvatar';
@@ -7,10 +9,22 @@ interface DashboardHeaderProps {
   title: string;
   caption: string;
   hideCreateBtn?: boolean;
+  showAnalyticsBtn?: boolean;
+  value?: string;
+  dropdownData?: OptionTypes[];
+  onChange?: (value: string) => void;
 }
 
 export default function DashboardHeader(props: DashboardHeaderProps) {
-  const { title, caption, hideCreateBtn = false } = props;
+  const {
+    title,
+    caption,
+    value,
+    dropdownData,
+    hideCreateBtn = false,
+    showAnalyticsBtn = false,
+    onChange,
+  } = props;
 
   return (
     <header className="flex items-center justify-between">
@@ -26,6 +40,9 @@ export default function DashboardHeader(props: DashboardHeaderProps) {
 
       <div className="flex items-center gap-4">
         {!hideCreateBtn && <CreateProjectButton />}
+        {showAnalyticsBtn && (
+          <AnalyticsButton value={value} items={dropdownData} onChange={onChange} />
+        )}
         <NotificationButton />
         <UserAvatar />
       </div>

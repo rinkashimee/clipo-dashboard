@@ -5,6 +5,7 @@ import type { OptionTypes } from '@/types/ClipoCommonTypes';
 import { Button } from '../Button';
 import { Typography } from '../Typography';
 import useDropdownOutsideClick from '@/hooks/DropdownOutsideClick';
+import { ClipIcons, type IconType } from '@/components/icons/ClipIcons';
 
 interface DropdownProps {
   value: string;
@@ -14,10 +15,30 @@ interface DropdownProps {
   placeholder?: string;
   prefix?: ReactNode;
   width?: number;
+  className?: string;
+
+  icon?: IconType;
+  color?: string;
+  size?: number;
+  iconClassName?: string;
+  showIcon?: boolean;
 }
 
 export default function Dropdown(props: DropdownProps) {
-  const { value, items, onChange, placeholder = 'Select', prefix, width } = props;
+  const {
+    value,
+    items,
+    onChange,
+    placeholder = 'Select',
+    prefix,
+    width,
+    className,
+    icon = 'ArrowLeftIcon',
+    color,
+    size,
+    iconClassName,
+    showIcon = false,
+  } = props;
 
   const [open, setOpen] = useState(false);
 
@@ -38,9 +59,13 @@ export default function Dropdown(props: DropdownProps) {
         color={colors.neutral500}
         onClick={() => setOpen((prev) => !prev)}
         iconClassName={clsx('transition-transform', open && 'rotate-180')}
-        className="border-default shadow-default flex h-10 w-full cursor-pointer items-center justify-between rounded-lg bg-white px-4 focus:border-[var(--primary-500)]"
+        className={`border-default shadow-default flex h-10 w-full cursor-pointer items-center justify-between rounded-lg bg-white px-4 focus:border-[var(--primary-500)] ${className}`}
       >
         <div className="flex items-center gap-1">
+          {showIcon && (
+            <ClipIcons icon={icon} size={size} color={color} className={iconClassName} />
+          )}
+
           {prefix && (
             <Typography as="span" variant="body-sm" color="neutral500" cursor="pointer">
               {prefix}

@@ -1,5 +1,5 @@
 import { colors } from '@/lib/colors/colors';
-import { ClipIcons } from '../../icons/ClipIcons';
+import { ClipIcons, type IconType } from '../../icons/ClipIcons';
 import type { OptionTypes } from '@/types/ClipoCommonTypes';
 import Dropdown from './Dropdown';
 
@@ -10,6 +10,12 @@ interface ToolbarProps {
   dropdownWidth?: number;
   dropdownPrefix?: string;
   searchPlaceholder: string;
+  icon?: IconType;
+  color?: string;
+  size?: number;
+  iconClassName?: string;
+  showIcon?: boolean;
+  dropdownClassName?: string;
   dropdownPlaceholder?: string;
   dropdownData: OptionTypes[];
   onSearchChange: (value: string) => void;
@@ -23,9 +29,15 @@ export default function Toolbar(props: ToolbarProps) {
     dropdownData,
     dropdownPrefix,
     searchPlaceholder,
+    dropdownClassName,
     dropdownPlaceholder,
     searchWidth = 280,
     dropdownWidth = 132,
+    icon,
+    color,
+    size,
+    iconClassName,
+    showIcon = false,
     onSearchChange,
     onDropdownChange,
   } = props;
@@ -49,10 +61,16 @@ export default function Toolbar(props: ToolbarProps) {
 
       {/* Dropdown */}
       <Dropdown
+        icon={icon}
+        size={size}
+        color={color}
+        showIcon={showIcon}
         items={dropdownData}
         value={dropdownValue}
         width={dropdownWidth}
         prefix={dropdownPrefix}
+        iconClassName={iconClassName}
+        className={dropdownClassName}
         placeholder={dropdownPlaceholder}
         onChange={onDropdownChange}
       />

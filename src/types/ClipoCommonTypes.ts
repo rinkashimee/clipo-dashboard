@@ -2,9 +2,13 @@ import type { ReactNode } from 'react';
 
 export type StatusBadgeTypes = 'processing' | 'ready' | 'exported' | 'failed';
 
+export type AnalyticsInterval = 'daily' | 'weekly' | 'monthly' | 'yearly';
+
 export interface ChartDataTypes {
-  date: string;
-  views: number;
+  date?: string;
+  value: number;
+  name?: string;
+  color?: string;
 }
 
 export interface OptionTypes {
