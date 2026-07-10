@@ -34,6 +34,17 @@ export const ANALYTICSDATES_OPTIONS: OptionTypes[] = [
   },
 ];
 
+export const ANALYTICS_OVERVIEW_OPTIONS: OptionTypes[] = [
+  {
+    label: 'Last 7 days',
+    value: 'last7Days',
+  },
+  {
+    label: 'Last 30 days',
+    value: 'last30Days',
+  },
+];
+
 export const ANALYTICSINTERVAL_OPTIONS: OptionTypes[] = [
   {
     label: 'Daily',

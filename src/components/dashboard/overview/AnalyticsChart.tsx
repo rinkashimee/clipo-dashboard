@@ -1,21 +1,34 @@
-import { analyticsChartData } from '@/data/AnalyticsChart';
 import { colors } from '@/lib/colors/colors';
 import ClipoCharts from '../../ui/chart/ClipoCharts';
+import { chartsData } from '@/hooks/overview/ChartData';
+import type { ChartDataTypes } from '@/types/ClipoCommonTypes';
+import { getAnalyticsData, tickChartFormatter } from '@/utils/ClipoUtils';
 
-export default function AnalyticsChart() {
-  const chartData = analyticsChartData();
+interface AnalyticsChartProps {
+  date: string;
+}
+
+export default function AnalyticsChart(props: AnalyticsChartProps) {
+  const { date } = props;
+
+  const data = chartsData();
+  let filterData: ChartDataTypes[] = getAnalyticsData(data, date);
+
+  const xAxisInterval = {
+    last7Days: 1,
+    last30Days: 0,
+  }[date];
 
   return (
     <div className="xl:h-60 2xl:h-65">
       <ClipoCharts
-        chartData={chartData}
+        chartData={filterData}
         chartVariant="AreaChart"
+        interval={xAxisInterval}
         color={colors.primary500}
         gradientId="overviewGradient"
-        yAxisTickData={[0, 10000, 20000, 30000]}
-        tickFormatter={(value) => (value === 0 ? '0' : `${value / 1000}K`)}
+        tickFormatter={(value) => tickChartFormatter(value)}
         formatter={(value) => [`${value?.toLocaleString()}`, 'Views']}
-        labelFormatter={() => ''}
       />
     </div>
   );

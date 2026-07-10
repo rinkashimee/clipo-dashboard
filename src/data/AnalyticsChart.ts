@@ -1,30 +1,3 @@
-import type { ChartDataTypes } from '@/types/ClipoCommonTypes';
-
-export function analyticsChartData(): ChartDataTypes[] {
-  return [
-    { date: 'May 10', value: 12000 },
-    { date: '', value: 14500 },
-
-    { date: 'May 11', value: 14000 },
-    { date: '', value: 16000 },
-
-    { date: 'May 12', value: 19000 },
-    { date: '', value: 17000 },
-
-    { date: 'May 13', value: 18000 },
-    { date: '', value: 22000 },
-
-    { date: 'May 14', value: 29000 },
-    { date: '', value: 24000 },
-
-    { date: 'May 15', value: 21000 },
-    { date: '', value: 23000 },
-
-    { date: 'May 16', value: 20000 },
-    { date: '', value: 18000 },
-  ];
-}
-
 export const engagementOvertimeData = {
   daily: [
     { label: 'Jun 17', value: 5200 },

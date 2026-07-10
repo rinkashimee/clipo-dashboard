@@ -3,12 +3,23 @@ import AnalyticsChart from './AnalyticsChart';
 import AnalyticsSummaryCard from './AnalyticsSummaryCard';
 import { useTranslation } from 'react-i18next';
 import { Typography } from '../../ui/Typography';
-import { Button } from '../../ui/Button';
-import { colors } from '@/lib/colors/colors';
+import Dropdown from '@/components/ui/toolbar/Dropdown';
+import { ANALYTICS_OVERVIEW_OPTIONS } from '@/constants/ConstantData';
+import { getAnalyticsData } from '@/utils/ClipoUtils';
+import type { AnalyticsSummaryTypes } from '@/types/OverViewTypes';
 
-export default function AnalyticsOverview() {
+interface AnalyticsOverviewProps {
+  date: string;
+  setDate: (date: string) => void;
+}
+
+export default function AnalyticsOverview(props: AnalyticsOverviewProps) {
+  const { date, setDate } = props;
+
   const { t } = useTranslation();
+
   const analyticsSummary = analyticsData();
+  let filterData: AnalyticsSummaryTypes[] = getAnalyticsData(analyticsSummary, date);
 
   return (
     <section className="border-default shadow-default rounded-lg border bg-white xl:p-5 2xl:p-6">
@@ -17,27 +28,22 @@ export default function AnalyticsOverview() {
           {t('overview.analytics-overview')}
         </Typography>
 
-        <Button
-          size={18}
-          variant="custom"
-          icon="CaretDownIcon"
-          iconPosition="right"
-          color={colors.neutral900}
-          className="border-default flex cursor-pointer items-center justify-center gap-2 rounded-lg border bg-white px-[18px] py-[6px] transition-colors hover:bg-neutral-50"
-        >
-          <Typography as="span" variant="body-sm" color="neutral900" cursor="pointer">
-            {t('overview.last-7days')}
-          </Typography>
-        </Button>
+        <Dropdown
+          width={160}
+          value={date}
+          className="h-[35px]"
+          items={ANALYTICS_OVERVIEW_OPTIONS}
+          onChange={setDate}
+        />
       </div>
 
       <div className="grid grid-cols-3 gap-4 xl:mb-4 2xl:mb-6">
-        {analyticsSummary.map((summary) => (
+        {filterData.map((summary) => (
           <AnalyticsSummaryCard key={summary.id} summary={summary} />
         ))}
       </div>
 
-      <AnalyticsChart />
+      <AnalyticsChart date={date} />
     </section>
   );
 }

@@ -4,9 +4,12 @@ import RecentProjects from '@/components/dashboard/overview/RecentProject';
 import StatsSection from '@/components/dashboard/overview/StatsSection';
 import TopPerformingClips from '@/components/dashboard/overview/TopPerformingClips';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 export default function Overview() {
   const { t } = useTranslation();
+
+  const [date, setDate] = useState<string>('last7Days');
 
   return (
     <>
@@ -17,7 +20,7 @@ export default function Overview() {
 
         <div className="mt-2 grid grid-cols-2 gap-2">
           <RecentProjects />
-          <AnalyticsOverview />
+          <AnalyticsOverview date={date} setDate={setDate} />
         </div>
 
         <TopPerformingClips />
