@@ -29,6 +29,7 @@ export interface TablePaginationTypes {
   current: number;
   pageSize: number;
   total: number;
+  resourceName?: string;
   onChange?: (page: number) => void;
 }
 

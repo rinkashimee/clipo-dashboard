@@ -43,7 +43,7 @@ export function Button({
         ],
         {
           'btn-primary': variant === 'primary',
-          'btn-secondary': variant === 'secondary', //TODO: Need apply styles..
+          'btn-secondary': variant === 'secondary',
         },
         className
       )}

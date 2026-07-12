@@ -15,7 +15,7 @@ export default function ClipResults() {
         caption={t('clip-results.caption')}
       />
 
-      <main className="mt-1 xl:mt-1 2xl:mt-2">
+      <main>
         <BackToProjects />
         <ProjectSummaryCard />
         <ClipTabs />

@@ -32,7 +32,15 @@
     "tablet": "Tablet",
     "desktop": "Desktop",
     "male": "Male",
-    "female": "Female"
+    "female": "Female",
+    "new-template": "New Template",
+    "sort-by": "Sort By:",
+    "use": "Use",
+    "create-new-temp": "Create New Template",
+    "scratch": "Start from scratch",
+    "pagination-showing": "Showing {{count}} of {{total}} {{resourceName}}",
+    "my-templates": "My Templates",
+    "library": "Library"
   },
   "overview": {
     "title": "Welcome back, Marcus!👋",
@@ -87,8 +95,7 @@
   "projects": {
     "title": "Projects",
     "caption": "Manage all your uploaded videos and their processing status.",
-    "search-projects": "Search projects...",
-    "showing": "Showing {{count}} of {{total}} projects"
+    "search-projects": "Search projects..."
   },
   "clip-results": {
     "title": "Clip Results",
@@ -117,5 +124,18 @@
     "top-countries": "Top Countries",
     "top-device": "Top Device",
     "prev-period": "Previous Period"
+  },
+  "templates": {
+    "title": "Templates",
+    "caption": "Create and manage clip templates.",
+    "search-templates": "Search templates...",
+    "search-libraries": "Search libraries...",
+    "default-temp": "Default Template",
+    "podcast-style": "Podcast Style",
+    "caption-focus": "Caption Focus",
+    "minimal-clean": "Minimal Clean",
+    "business-look": "Business Look",
+    "quote-style": "Quote Style",
+    "story-highlight": "Story Highlight"
   }
 }

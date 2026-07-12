@@ -63,3 +63,17 @@ export const ANALYTICSINTERVAL_OPTIONS: OptionTypes[] = [
     value: 'yearly',
   },
 ];
+
+export const TEMPLATES_SORTBY_OPTIONS: OptionTypes[] = [
+  { label: 'Recent', value: 'recent' },
+  { label: 'Oldest', value: 'oldest' },
+];
+
+export const PLATFORM_OPTIONS: OptionTypes[] = [
+  { label: 'All Platforms', value: 'all' },
+  { label: 'TikTok', value: 'tiktok' },
+  { label: 'Instagram', value: 'instagram' },
+  { label: 'YouTube', value: 'youtube' },
+  { label: 'Linkedin', value: 'linkedin' },
+  { label: 'X(Twitter)', value: 'twitter' },
+];

@@ -7,12 +7,13 @@ interface TablePaginationProps {
   current: number;
   pageSize: number;
   total: number;
+  resourceName?: string;
 
   onChange?: (page: number) => void;
 }
 
 export default function TablePagination(props: TablePaginationProps) {
-  const { current, pageSize, total, onChange } = props;
+  const { current, pageSize, total, resourceName, onChange } = props;
   const { t } = useTranslation();
 
   const totalPages = Math.ceil(total / pageSize);
@@ -20,9 +21,10 @@ export default function TablePagination(props: TablePaginationProps) {
   return (
     <div className="flex items-center justify-between px-6 py-4">
       <Typography variant="body-sm" color="neutral500" cursor="default">
-        {t('projects.showing', {
+        {t('common.pagination-showing', {
           count: `${(current - 1) * pageSize + 1}-${Math.min(current * pageSize, total)}`,
           total: `${total}`,
+          resourceName: resourceName?.toLowerCase(),
         })}
       </Typography>
 

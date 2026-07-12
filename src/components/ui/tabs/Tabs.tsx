@@ -17,7 +17,7 @@ export default function Tabs(props: TabsProps) {
 
   return (
     <div className="space-y-2">
-      <div className="flex items-center justify-between">
+      <div className="tab-header-b-border flex items-center justify-between">
         <div className="flex items-center gap-1">
           {items.map((item) => (
             <Button
@@ -26,9 +26,9 @@ export default function Tabs(props: TabsProps) {
               disabled={item.disabled}
               onClick={() => onChange?.(item.key)}
               className={clsx(
-                `body-sm cursor-pointer rounded-t-md px-4 py-2 text-[${colors.neutral500}] transition-colors`,
+                `body-sm cursor-pointer rounded-t-md px-4 py-3 text-[var(--neutral-500)] transition-colors`,
                 activeKey === item.key
-                  ? `border-b border-[${colors.primary500}] bg-[${colors.primary100}] text-[${colors.primary500}]`
+                  ? `border-b border-[var(--primary-500)] bg-[var(--primary-100)] text-[var(--primary-500)]`
                   : 'hover:bg-neutral-100',
                 item.disabled && 'cursor-not-allowed opacity-50'
               )}
@@ -38,7 +38,7 @@ export default function Tabs(props: TabsProps) {
           ))}
         </div>
 
-        {tabBarExtraContent && <div>{tabBarExtraContent}</div>}
+        {tabBarExtraContent && <div className="mb-1">{tabBarExtraContent}</div>}
       </div>
 
       <div>{activeTab?.children}</div>

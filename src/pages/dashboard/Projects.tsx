@@ -63,6 +63,7 @@ export default function Projects() {
               current: currentPage,
               pageSize: pageSize,
               total: filteredProjects.length,
+              resourceName: t('projects.title'),
               onChange: setCurrentPage,
             }}
           />
