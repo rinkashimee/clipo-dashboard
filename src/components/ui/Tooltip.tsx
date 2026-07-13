@@ -42,6 +42,7 @@ export default function Tooltip({
     <>
       <div
         ref={triggerRef}
+        hidden={hideTooltip}
         className={clsx('inline-flex', className)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setVisible(false)}
