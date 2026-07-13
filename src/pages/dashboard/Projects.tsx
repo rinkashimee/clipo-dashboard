@@ -57,7 +57,7 @@ export default function Projects() {
         <div className="mt-2 xl:mt-4 2xl:mt-6">
           <Table
             rowKey={(project) => project.id}
-            columns={projectColumns}
+            columns={projectColumns()}
             data={paginatedProjects}
             pagination={{
               current: currentPage,

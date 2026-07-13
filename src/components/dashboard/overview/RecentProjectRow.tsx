@@ -3,12 +3,16 @@ import type { RecentProjectTypes } from '@/types/OverViewTypes';
 import { Typography } from '../../ui/Typography';
 import { Button } from '../../ui/Button';
 import { colors } from '@/lib/colors/colors';
+import { useTranslation } from 'react-i18next';
+import Tooltip from '@/components/ui/Tooltip';
 
 interface Props {
   project: RecentProjectTypes;
 }
 
 export default function RecentProjectRow({ project }: Props) {
+  const { t } = useTranslation();
+
   return (
     <div className="table-b-border flex items-center justify-between border-b py-[10px] transition hover:bg-neutral-50">
       <div className="flex items-center gap-4">
@@ -30,13 +34,15 @@ export default function RecentProjectRow({ project }: Props) {
       <div className="flex items-center gap-10">
         <StatusBadge status={project.status} showIcon={true} />
 
-        <Button
-          size={18}
-          variant="custom"
-          color={colors.neutral700}
-          icon="DotsThreeVerticalIcon"
-          className="border-default flex h-8 w-8 cursor-pointer items-center justify-center rounded-md border bg-white transition-colors hover:bg-neutral-50"
-        ></Button>
+        <Tooltip title={t('common.more')}>
+          <Button
+            size={18}
+            variant="custom"
+            color={colors.neutral700}
+            icon="DotsThreeVerticalIcon"
+            className="border-default flex h-8 w-8 cursor-pointer items-center justify-center rounded-md border bg-white transition-colors hover:bg-neutral-50"
+          ></Button>
+        </Tooltip>
       </div>
     </div>
   );

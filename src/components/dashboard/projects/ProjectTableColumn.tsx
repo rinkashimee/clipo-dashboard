@@ -1,91 +1,77 @@
 import type { TableColumn } from '@/types/ClipoCommonTypes';
 import type { ProjectTypes } from '@/types/ProjectTypes';
-import { colors } from '@/lib/colors/colors';
 import StatusBadge from '@/components/ui/StatusBadge';
 import { Typography } from '@/components/ui/Typography';
-import { Button } from '@/components/ui/Button';
+import ProjectAction from './ProjectAction';
+import { useTranslation } from 'react-i18next';
 
-export const projectColumns: TableColumn<ProjectTypes>[] = [
-  {
-    key: 'video',
-    title: 'Video',
-    dataIndex: 'title',
-    render: (_, project) => (
-      <div className="flex items-center gap-4">
-        <div className="h-[50px] w-[88px] overflow-hidden rounded-lg">
-          <img src={project.thumbnail} alt={project.title} className="object-cover" />
+export function projectColumns(): TableColumn<ProjectTypes>[] {
+  const { t } = useTranslation();
+
+  return [
+    {
+      key: 'video',
+      title: t('common.table-title.video'),
+      dataIndex: 'title',
+      render: (_, project) => (
+        <div className="flex items-center gap-4">
+          <div className="h-[50px] w-[88px] overflow-hidden rounded-lg">
+            <img src={project.thumbnail} alt={project.title} className="object-cover" />
+          </div>
+
+          <Typography as="span" variant="body-sm" color="neutral900" cursor="default">
+            {project.title}
+          </Typography>
         </div>
+      ),
+    },
 
+    {
+      key: 'duration',
+      title: t('common.table-title.duration'),
+      dataIndex: 'duration',
+      render: (_, project) => (
         <Typography as="span" variant="body-sm" color="neutral900" cursor="default">
-          {project.title}
+          {project.duration}
         </Typography>
-      </div>
-    ),
-  },
+      ),
+    },
 
-  {
-    key: 'duration',
-    title: 'Duration',
-    dataIndex: 'duration',
-    render: (_, project) => (
-      <Typography as="span" variant="body-sm" color="neutral900" cursor="default">
-        {project.duration}
-      </Typography>
-    ),
-  },
+    {
+      key: 'uploaded',
+      title: t('common.table-title.uploaded'),
+      dataIndex: 'uploadedDate',
+      render: (_, project) => (
+        <Typography as="span" variant="body-sm" color="neutral900" cursor="default">
+          {project.uploadedDate}
+        </Typography>
+      ),
+    },
 
-  {
-    key: 'uploaded',
-    title: 'Uploaded',
-    dataIndex: 'uploadedDate',
-    render: (_, project) => (
-      <Typography as="span" variant="body-sm" color="neutral900" cursor="default">
-        {project.uploadedDate}
-      </Typography>
-    ),
-  },
+    {
+      key: 'status',
+      title: t('common.table-title.status'),
+      width: 180,
+      render: (_, project) => <StatusBadge status={project.status} showIcon={true} />,
+    },
 
-  {
-    key: 'status',
-    title: 'Status',
-    width: 180,
-    render: (_, project) => <StatusBadge status={project.status} showIcon={true} />,
-  },
+    {
+      key: 'clips',
+      title: t('common.table-title.clips'),
+      dataIndex: 'clips',
+      render: (_, project) => (
+        <Typography as="span" variant="body-sm" color="neutral900" cursor="default">
+          {project.clips}
+        </Typography>
+      ),
+    },
 
-  {
-    key: 'clips',
-    title: 'Clips',
-    dataIndex: 'clips',
-    render: (_, project) => (
-      <Typography as="span" variant="body-sm" color="neutral900" cursor="default">
-        {project.clips}
-      </Typography>
-    ),
-  },
-
-  {
-    key: 'actions',
-    title: 'Actions',
-    align: 'left',
-    width: 150,
-    render: () => (
-      <div className="flex justify-start gap-2">
-        <Button
-          size={18}
-          variant="custom"
-          color={colors.neutral700}
-          icon="EyeIcon"
-          className="border-default flex h-8 w-8 cursor-pointer items-center justify-center rounded-md border bg-white transition-colors hover:bg-neutral-50"
-        ></Button>
-
-        <Button
-          size={18}
-          variant="custom"
-          color={colors.neutral700}
-          icon="DotsThreeVerticalIcon"
-          className="border-default flex h-8 w-8 cursor-pointer items-center justify-center rounded-md border bg-white transition-colors hover:bg-neutral-50"
-        ></Button>
-      </div>
-    ),
-  },
-];
+    {
+      key: 'actions',
+      title: t('common.table-title.actions'),
+      align: 'left',
+      width: 150,
+      render: () => <ProjectAction />,
+    },
+  ];
+}

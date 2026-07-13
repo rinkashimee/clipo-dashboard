@@ -44,7 +44,16 @@
     "edit": "Edit",
     "export": "Export",
     "download": "Download",
-    "more": "More"
+    "more": "More",
+    "view": "View",
+    "table-title": {
+      "video": "Video",
+      "duration": "Duration",
+      "uploaded": "Uploaded",
+      "status": "Status",
+      "clips": "Clips",
+      "actions": "Actions"
+    }
   },
   "overview": {
     "title": "Welcome back, Marcus!👋",
