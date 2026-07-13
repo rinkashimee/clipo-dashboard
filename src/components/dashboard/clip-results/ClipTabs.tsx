@@ -51,6 +51,10 @@ export default function ClipTabs() {
     return sortClips(filteredClipData.filter((clip) => clip.status === 'ready'));
   }, [clipResultData, sort]);
 
+  const filteredExported = useMemo(() => {
+    return sortClips(filteredClipData.filter((clip) => clip.status === 'exported'));
+  }, [clipResultData, sort]);
+
   const items = [
     {
       key: 'all',
@@ -72,6 +76,13 @@ export default function ClipTabs() {
         count: `${filteredReadyToExport?.length}`,
       }),
       children: <ClipGrid clips={filteredReadyToExport} />,
+    },
+    {
+      key: 'exported',
+      label: t('clip-results.exported', {
+        count: `${filteredReadyToExport?.length}`,
+      }),
+      children: <ClipGrid clips={filteredExported} />,
     },
   ];
 

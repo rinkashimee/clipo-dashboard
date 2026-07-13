@@ -1,7 +1,7 @@
 import type { PerformingClipTypes } from '@/types/OverViewTypes';
-import { Typography } from '../Typography';
+import { Typography } from '../../../ui/Typography';
 import ViralScoreBadge from './ViralScoreBadge';
-import StatusBadge from '../StatusBadge';
+import StatusBadge from '../../../ui/StatusBadge';
 import ClipStats from './ClipStats';
 import ClipCardActions from './ClipCardActions';
 
@@ -11,7 +11,7 @@ interface ClipCardsProps {
 
 export default function ClipCards({ clip }: ClipCardsProps) {
   return (
-    <div className="border-default shadow-default flex h-full flex-col overflow-hidden rounded-2xl bg-white transition-all hover:scale-105">
+    <div className="border-default shadow-default flex h-full flex-col overflow-hidden rounded-2xl bg-white">
       <div className="relative overflow-hidden">
         <img src={clip.thumbnail} alt={clip.title} className="aspect-video w-full object-cover" />
 
@@ -37,7 +37,7 @@ export default function ClipCards({ clip }: ClipCardsProps) {
       <div className="card-t-border flex items-center justify-between border-t p-3">
         <StatusBadge status={clip.status} showIcon={true} />
 
-        <ClipCardActions />
+        <ClipCardActions clip={clip} />
       </div>
     </div>
   );

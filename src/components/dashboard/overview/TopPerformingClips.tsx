@@ -9,7 +9,7 @@ export default function TopPerformingClips() {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const clips = performingClipData();
-  const exportedClips = clips.filter((clip) => clip.status === 'exported');
+  const exportedClips = clips.filter((clip) => clip.status === 'published');
 
   return (
     <section className="border-default shadow-default mt-2 rounded-lg border bg-white xl:p-5 2xl:p-6">

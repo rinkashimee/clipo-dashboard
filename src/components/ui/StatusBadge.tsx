@@ -33,6 +33,13 @@ const statusConfig: Record<
     icon: 'CheckIcon',
     iconSize: 13.5,
   },
+  published: {
+    label: 'Published',
+    textColor: 'success500',
+    className: 'bg-[var(--success-100)]',
+    icon: 'CheckIcon',
+    iconSize: 13.5,
+  },
   exported: {
     label: 'Exported',
     textColor: 'info500',

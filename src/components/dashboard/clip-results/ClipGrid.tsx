@@ -1,4 +1,4 @@
-import ClipCards from '@/components/ui/clip-card/ClipCards';
+import ClipCards from '@/components/dashboard/clip-results/clip-card/ClipCards';
 import type { PerformingClipTypes } from '@/types/OverViewTypes';
 
 interface ClipGridProps {

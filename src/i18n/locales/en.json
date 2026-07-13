@@ -40,7 +40,11 @@
     "scratch": "Start from scratch",
     "pagination-showing": "Showing {{count}} of {{total}} {{resourceName}}",
     "my-templates": "My Templates",
-    "library": "Library"
+    "library": "Library",
+    "edit": "Edit",
+    "export": "Export",
+    "download": "Download",
+    "more": "More"
   },
   "overview": {
     "title": "Welcome back, Marcus!👋",
@@ -90,7 +94,8 @@
     "clip7-title": "3 AI tools every creator should be using.",
     "clip8-title": "How I automate 80% of my content workflow.",
     "clip9-title": "Youre Doing Productivity Wrong.",
-    "clip10-title": "Most People Ignore This Productivity Trick."
+    "clip10-title": "Most People Ignore This Productivity Trick.",
+    "clip11-title": "The Secret to Getting More Done."
   },
   "projects": {
     "title": "Projects",
@@ -105,7 +110,8 @@
     "sort-by": "Sort By:",
     "all-clips": "All Clips ({{count}})",
     "high-score": "High Score ({{count}})",
-    "ready-to-export": "Ready to Export ({{count}})"
+    "ready-to-export": "Ready to Export ({{count}})",
+    "exported": "Exported ({{count}})"
   },
   "analytics": {
     "title": "Analytics",

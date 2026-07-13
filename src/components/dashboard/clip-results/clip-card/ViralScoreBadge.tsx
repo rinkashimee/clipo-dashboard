@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Typography } from '../Typography';
+import { Typography } from '../../../ui/Typography';
 
 interface ViralScoreBadgeProps {
   score: number;

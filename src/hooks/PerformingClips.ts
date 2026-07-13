@@ -24,7 +24,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 6100,
       likes: 578,
       shares: 142,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 15400,
       likes: 1425,
       shares: 395,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 2900,
       likes: 284,
       shares: 76,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 4,
@@ -57,7 +57,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 8700,
       likes: 943,
       shares: 218,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 5,
@@ -68,7 +68,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 7300,
       likes: 664,
       shares: 168,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 6,
@@ -79,7 +79,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 22100,
       likes: 2190,
       shares: 612,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 7,
@@ -90,7 +90,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 4700,
       likes: 421,
       shares: 98,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 8,
@@ -101,7 +101,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 9600,
       likes: 1108,
       shares: 254,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 9,
@@ -112,7 +112,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 13200,
       likes: 1315,
       shares: 371,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 10,
@@ -123,7 +123,7 @@ export function performingClipData(): PerformingClipTypes[] {
       views: 3900,
       likes: 352,
       shares: 88,
-      status: 'exported',
+      status: 'published',
     },
     {
       id: 11,
@@ -135,6 +135,17 @@ export function performingClipData(): PerformingClipTypes[] {
       likes: 0,
       shares: 0,
       status: 'ready',
+    },
+    {
+      id: 12,
+      thumbnail: clip2,
+      title: t('clips-title.clip11-title'),
+      duration: '01:10',
+      viralScore: 0,
+      views: 0,
+      likes: 0,
+      shares: 0,
+      status: 'exported',
     },
   ];
 }

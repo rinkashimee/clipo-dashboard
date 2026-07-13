@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-export type StatusBadgeTypes = 'processing' | 'ready' | 'exported' | 'failed';
+export type StatusBadgeTypes = 'processing' | 'ready' | 'exported' | 'failed' | 'published';
 
 export type AnalyticsInterval = 'daily' | 'weekly' | 'monthly' | 'yearly';
 

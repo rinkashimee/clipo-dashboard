@@ -1,5 +1,5 @@
 import { colors } from '@/lib/colors/colors';
-import { Typography } from '../Typography';
+import { Typography } from '../../../ui/Typography';
 import { ClipIcons, type IconType } from '@/components/icons/ClipIcons';
 import { formatNumber } from '@/utils/ClipoUtils';
 
