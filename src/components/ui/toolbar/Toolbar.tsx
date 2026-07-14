@@ -1,46 +1,19 @@
 import { colors } from '@/lib/colors/colors';
-import { ClipIcons, type IconType } from '../../icons/ClipIcons';
-import type { OptionTypes } from '@/types/ClipoCommonTypes';
+import { ClipIcons } from '../../icons/ClipIcons';
+import type { DropdownFilterTypes } from '@/types/ClipoCommonTypes';
 import Dropdown from './Dropdown';
 
 interface ToolbarProps {
   search: string;
-  dropdownValue: string;
   searchWidth?: number;
-  dropdownWidth?: number;
-  dropdownPrefix?: string;
   searchPlaceholder: string;
-  icon?: IconType;
-  color?: string;
-  size?: number;
-  iconClassName?: string;
-  showIcon?: boolean;
-  dropdownClassName?: string;
-  dropdownPlaceholder?: string;
-  dropdownData: OptionTypes[];
   onSearchChange: (value: string) => void;
-  onDropdownChange: (value: string) => void;
+
+  dropdown?: DropdownFilterTypes[];
 }
 
 export default function Toolbar(props: ToolbarProps) {
-  const {
-    search,
-    dropdownValue,
-    dropdownData,
-    dropdownPrefix,
-    searchPlaceholder,
-    dropdownClassName,
-    dropdownPlaceholder,
-    searchWidth = 280,
-    dropdownWidth = 132,
-    icon,
-    color,
-    size,
-    iconClassName,
-    showIcon = false,
-    onSearchChange,
-    onDropdownChange,
-  } = props;
+  const { search, dropdown, searchPlaceholder, searchWidth = 280, onSearchChange } = props;
 
   return (
     <div className="flex items-center justify-end gap-4">
@@ -60,20 +33,23 @@ export default function Toolbar(props: ToolbarProps) {
       </div>
 
       {/* Dropdown */}
-      <Dropdown
-        icon={icon}
-        size={size}
-        color={color}
-        showIcon={showIcon}
-        items={dropdownData}
-        value={dropdownValue}
-        width={dropdownWidth}
-        prefix={dropdownPrefix}
-        iconClassName={iconClassName}
-        className={dropdownClassName}
-        placeholder={dropdownPlaceholder}
-        onChange={onDropdownChange}
-      />
+      {dropdown?.map((dropdown, index) => (
+        <Dropdown
+          key={index}
+          icon={dropdown.icon}
+          size={dropdown.size}
+          color={dropdown.color}
+          showIcon={dropdown.showIcon ?? false}
+          items={dropdown.dropdownData}
+          value={dropdown.dropdownValue}
+          width={dropdown.dropdownWidth ?? 132}
+          prefix={dropdown.dropdownPrefix}
+          iconClassName={dropdown.iconClassName}
+          className={dropdown.dropdownClassName}
+          placeholder={dropdown.dropdownPlaceholder}
+          onChange={dropdown.onDropdownChange}
+        />
+      ))}
     </div>
   );
 }

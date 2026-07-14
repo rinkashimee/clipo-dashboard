@@ -1,3 +1,4 @@
+import type { IconType } from '@/components/icons/ClipIcons';
 import type { ReactNode } from 'react';
 
 export type StatusBadgeTypes = 'processing' | 'ready' | 'exported' | 'failed' | 'published';
@@ -39,3 +40,18 @@ export interface TabItemTypes {
   disabled?: boolean;
   children?: ReactNode;
 }
+
+export type DropdownFilterTypes = {
+  icon?: IconType;
+  size?: number;
+  color?: string;
+  showIcon?: boolean;
+  dropdownData: OptionTypes[];
+  dropdownValue: string;
+  dropdownWidth?: number;
+  dropdownPrefix?: string;
+  iconClassName?: string;
+  dropdownClassName?: string;
+  dropdownPlaceholder?: string;
+  onDropdownChange: (value: string) => void;
+};

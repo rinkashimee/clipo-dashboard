@@ -65,13 +65,17 @@ export default function TemplateGrid(props: TemplateGridProps) {
 
         <Toolbar
           search={search}
-          dropdownWidth={160}
-          dropdownValue={sort}
-          dropdownPrefix={t('common.sort-by')}
           searchPlaceholder={t('templates.search-templates')}
-          dropdownData={TEMPLATES_SORTBY_OPTIONS}
           onSearchChange={setSearch}
-          onDropdownChange={setSort}
+          dropdown={[
+            {
+              dropdownValue: sort,
+              dropdownWidth: 160,
+              dropdownPrefix: t('common.sort-by'),
+              dropdownData: TEMPLATES_SORTBY_OPTIONS,
+              onDropdownChange: setSort,
+            },
+          ]}
         />
       </div>
 

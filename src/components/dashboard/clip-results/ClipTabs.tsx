@@ -95,13 +95,17 @@ export default function ClipTabs() {
         tabBarExtraContent={
           <Toolbar
             search={search}
-            dropdownWidth={180}
-            dropdownValue={sort}
-            dropdownData={SORTBY_OPTIONS}
-            dropdownPrefix={t('clip-results.sort-by')}
             searchPlaceholder={t('clip-results.search-clips')}
             onSearchChange={setSearch}
-            onDropdownChange={setSort}
+            dropdown={[
+              {
+                dropdownWidth: 180,
+                dropdownValue: sort,
+                dropdownData: SORTBY_OPTIONS,
+                dropdownPrefix: t('clip-results.sort-by'),
+                onDropdownChange: setSort,
+              },
+            ]}
           />
         }
       />

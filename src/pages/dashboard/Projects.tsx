@@ -47,11 +47,15 @@ export default function Projects() {
       <main className="mt-1 xl:mt-1 2xl:mt-2">
         <Toolbar
           search={search}
-          dropdownValue={status}
-          dropdownData={STATUS_OPTIONS}
           searchPlaceholder={t('projects.search-projects')}
           onSearchChange={setSearch}
-          onDropdownChange={setStatus}
+          dropdown={[
+            {
+              dropdownValue: status,
+              dropdownData: STATUS_OPTIONS,
+              onDropdownChange: setStatus,
+            },
+          ]}
         />
 
         <div className="mt-2 xl:mt-4 2xl:mt-6">
