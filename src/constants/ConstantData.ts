@@ -77,3 +77,44 @@ export const PLATFORM_OPTIONS: OptionTypes[] = [
   { label: 'Linkedin', value: 'linkedin' },
   { label: 'X(Twitter)', value: 'twitter' },
 ];
+
+export const EXPORT_PROJECT_OPTIONS = [
+  {
+    label: 'All Project',
+    value: 'all',
+  },
+];
+
+export const EXPORT_FORMAT_OPTIONS = [
+  {
+    label: 'All Formats',
+    value: 'all',
+  },
+  {
+    label: 'MP4',
+    value: 'mp4',
+  },
+  {
+    label: 'MOV',
+    value: 'mov',
+  },
+];
+
+export const EXPORT_STATUS_OPTIONS = [
+  {
+    label: 'All Status',
+    value: 'all',
+  },
+  {
+    label: 'Completed',
+    value: 'completed',
+  },
+  {
+    label: 'Processing',
+    value: 'processing',
+  },
+  {
+    label: 'Failed',
+    value: 'failed',
+  },
+];

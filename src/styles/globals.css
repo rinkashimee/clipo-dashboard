@@ -227,6 +227,24 @@ html {
     scrollbar-width: none;
   }
 
+  .hide-y-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 6px;
+  }
+
+  .hide-y-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 9999px;
+  }
+
+  .hide-y-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .hide-y-scrollbar {
+    scrollbar-width: auto;
+  }
+
   @keyframes marquee {
     from {
       transform: translateX(0);

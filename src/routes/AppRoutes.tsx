@@ -1,6 +1,7 @@
 import DashboardLayout from '@/layouts/DashboardLayout';
 import Analytics from '@/pages/dashboard/Analytics';
 import ClipResults from '@/pages/dashboard/ClipResults';
+import ExportHistory from '@/pages/dashboard/ExportHistory';
 import Overview from '@/pages/dashboard/Overview';
 import Projects from '@/pages/dashboard/Projects';
 import Templates from '@/pages/dashboard/Templates';
@@ -17,7 +18,7 @@ export default function AppRoutes() {
         <Route path="/clips-results" element={<ClipResults />} />
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/templates" element={<Templates />} />
-        <Route path="/export-history" element={<Overview />} />
+        <Route path="/export-history" element={<ExportHistory />} />
         <Route path="/settings" element={<Overview />} />
       </Route>
     </Routes>

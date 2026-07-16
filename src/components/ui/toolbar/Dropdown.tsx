@@ -6,6 +6,8 @@ import { Button } from '../Button';
 import { Typography } from '../Typography';
 import useDropdownOutsideClick from '@/hooks/DropdownOutsideClick';
 import { ClipIcons, type IconType } from '@/components/icons/ClipIcons';
+import Tooltip from '../Tooltip';
+import React from 'react';
 
 interface DropdownProps {
   value: string;
@@ -22,6 +24,7 @@ interface DropdownProps {
   size?: number;
   iconClassName?: string;
   showIcon?: boolean;
+  showTooltip?: boolean;
 }
 
 export default function Dropdown(props: DropdownProps) {
@@ -38,6 +41,7 @@ export default function Dropdown(props: DropdownProps) {
     size,
     iconClassName,
     showIcon = false,
+    showTooltip = false,
   } = props;
 
   const [open, setOpen] = useState(false);
@@ -48,6 +52,30 @@ export default function Dropdown(props: DropdownProps) {
   useDropdownOutsideClick(dropdownRef, () => {
     setOpen(false);
   });
+
+  const renderDropdownItem = (item: OptionTypes) => (
+    <Button
+      variant="custom"
+      onClick={() => {
+        onChange?.(item.value);
+        setOpen(false);
+      }}
+      className={clsx(
+        'flex h-10 w-full items-center px-4',
+        item.value === value ? 'bg-[var(--primary-300)]' : 'hover:bg-neutral-100'
+      )}
+    >
+      <Typography
+        as="span"
+        variant="body-sm"
+        color={item.value === value ? 'white' : 'neutral500'}
+        cursor="pointer"
+        className="block w-full truncate text-left"
+      >
+        {item.label}
+      </Typography>
+    </Button>
+  );
 
   return (
     <div ref={dropdownRef} className="relative" style={{ width: width }}>
@@ -61,7 +89,7 @@ export default function Dropdown(props: DropdownProps) {
         iconClassName={clsx('transition-transform', open && 'rotate-180')}
         className={`border-default shadow-default flex h-10 w-full cursor-pointer items-center justify-between rounded-lg bg-white px-4 focus:border-[var(--primary-500)] ${className}`}
       >
-        <div className="flex items-center gap-1">
+        <div className="flex min-w-0 flex-1 items-center gap-1">
           {showIcon && (
             <ClipIcons icon={icon} size={size} color={color} className={iconClassName} />
           )}
@@ -72,36 +100,30 @@ export default function Dropdown(props: DropdownProps) {
             </Typography>
           )}
 
-          <Typography as="span" variant="body-sm" color="neutral500" cursor="pointer">
+          <Typography
+            as="span"
+            variant="body-sm"
+            color="neutral500"
+            cursor="pointer"
+            className="flex-1 truncate"
+          >
             {selectedItem?.label ?? placeholder}
           </Typography>
         </div>
       </Button>
 
       {open && (
-        <div className="border-default shadow-default absolute top-full z-50 mt-1 w-full overflow-hidden rounded-md bg-white">
+        <div className="border-default shadow-default no-scrollbar absolute top-full z-50 mt-1 max-h-100 w-full overflow-y-auto rounded-md bg-white">
           {items.map((item) => (
-            <Button
-              variant="custom"
-              key={item.value}
-              onClick={() => {
-                onChange?.(item.value);
-                setOpen(false);
-              }}
-              className={clsx(
-                'flex h-10 w-full items-center px-4',
-                item.value === value ? 'bg-[var(--primary-300)]' : 'hover:bg-neutral-100'
+            <React.Fragment key={item.value}>
+              {showTooltip ? (
+                <Tooltip title={item.label} className="block w-full">
+                  {renderDropdownItem(item)}
+                </Tooltip>
+              ) : (
+                renderDropdownItem(item)
               )}
-            >
-              <Typography
-                as="span"
-                variant="body-sm"
-                color={item.value === value ? 'white' : 'neutral500'}
-                cursor="pointer"
-              >
-                {item.label}
-              </Typography>
-            </Button>
+            </React.Fragment>
           ))}
         </div>
       )}

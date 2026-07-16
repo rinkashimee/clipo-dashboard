@@ -5,6 +5,7 @@ import CreateProjectButton from './CreateProjectButton';
 import NotificationButton from './NotificationButton';
 import UserAvatar from './UserAvatar';
 import CreateTemplateButton from './CreateTemplateButton';
+import ExportGuide from './ExportGuide';
 
 interface DashboardHeaderProps {
   title: string;
@@ -12,6 +13,7 @@ interface DashboardHeaderProps {
   hideCreateBtn?: boolean;
   showAnalyticsBtn?: boolean;
   showTemplateBtn?: boolean;
+  showExportGuideBtn?: boolean;
   value?: string;
   dropdownData?: OptionTypes[];
   onChange?: (value: string) => void;
@@ -26,6 +28,7 @@ export default function DashboardHeader(props: DashboardHeaderProps) {
     hideCreateBtn = false,
     showAnalyticsBtn = false,
     showTemplateBtn = false,
+    showExportGuideBtn = false,
     onChange,
   } = props;
 
@@ -47,6 +50,7 @@ export default function DashboardHeader(props: DashboardHeaderProps) {
           <AnalyticsButton value={value} items={dropdownData} onChange={onChange} />
         )}
         {showTemplateBtn && <CreateTemplateButton />}
+        {showExportGuideBtn && <ExportGuide />}
         <NotificationButton />
         <UserAvatar />
       </div>

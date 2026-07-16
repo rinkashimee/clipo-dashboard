@@ -4,8 +4,8 @@ import { createPortal } from 'react-dom';
 
 interface TooltipProps {
   children: ReactNode;
-  title: string;
-  placement?: 'top' | 'bottom';
+  title: string | ReactNode;
+  placement?: 'top' | 'bottom' | 'right' | 'left';
   className?: string;
   hideTooltip?: boolean;
 }

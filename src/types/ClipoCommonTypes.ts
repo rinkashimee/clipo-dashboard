@@ -1,7 +1,15 @@
 import type { IconType } from '@/components/icons/ClipIcons';
 import type { ReactNode } from 'react';
 
-export type StatusBadgeTypes = 'processing' | 'ready' | 'exported' | 'failed' | 'published';
+export type StatusBadgeTypes =
+  | 'processing'
+  | 'ready'
+  | 'exported'
+  | 'failed'
+  | 'published'
+  | 'completed';
+
+export type FormatBadgeTypes = 'mp4' | 'mov';
 
 export type AnalyticsInterval = 'daily' | 'weekly' | 'monthly' | 'yearly';
 
@@ -46,6 +54,7 @@ export type DropdownFilterTypes = {
   size?: number;
   color?: string;
   showIcon?: boolean;
+  showTooltip?: boolean;
   dropdownData: OptionTypes[];
   dropdownValue: string;
   dropdownWidth?: number;
@@ -54,4 +63,9 @@ export type DropdownFilterTypes = {
   dropdownClassName?: string;
   dropdownPlaceholder?: string;
   onDropdownChange: (value: string) => void;
+};
+
+export type DateRangeTypes = {
+  from: Date | undefined;
+  to?: Date;
 };

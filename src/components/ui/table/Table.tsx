@@ -2,33 +2,30 @@ import clsx from 'clsx';
 import type { TableColumn, TablePaginationTypes } from '@/types/ClipoCommonTypes';
 import TablePagination from './TablePagination';
 
-interface TableScroll {
-  x?: number | string;
-  y?: number | string;
-}
-
 interface TableProps<T> {
   rowKey: keyof T | ((record: T) => React.Key);
   columns: TableColumn<T>[];
   data: T[];
-  scroll?: TableScroll;
   pagination?: false | TablePaginationTypes;
+  tableWrapperClassName?: string;
 }
 
 export default function Table<T>(props: TableProps<T>) {
-  const { rowKey, columns, data, scroll, pagination } = props;
-
-  const height = scroll?.y ? `h-[${scroll?.y}px]` : `xl:h-[690px] 2xl:h-[720px]`;
+  const { rowKey, columns, data, pagination, tableWrapperClassName } = props;
 
   return (
     <div
-      className={`border-default shadow-default flex flex-col overflow-hidden rounded-lg bg-white ${height}`}
+      className={clsx(
+        'border-default shadow-default flex flex-col overflow-hidden rounded-lg bg-white',
+        tableWrapperClassName
+      )}
     >
-      <div className="no-scrollbar flex-1 overflow-y-auto">
+      <div className="hide-y-scrollbar flex-1 overflow-auto">
         <table
-          className="w-full border-collapse"
+          className="border-collapse"
           style={{
-            minWidth: scroll?.x,
+            width: 'max-content',
+            minWidth: '100%',
           }}
         >
           <thead>
@@ -38,7 +35,7 @@ export default function Table<T>(props: TableProps<T>) {
                   key={column.key}
                   style={{ width: column.width }}
                   className={clsx(
-                    'table-b-border body-sm sticky top-0 bg-[#F3F3F4] px-4 py-3 text-left text-[var(--neutral-500)] xl:px-8 xl:py-[18px] 2xl:px-8 2xl:py-5',
+                    'table-b-border body-sm sticky top-0 z-10 bg-[#F3F3F4] px-4 py-3 text-left text-[var(--neutral-500)] xl:px-8 xl:py-[18px] 2xl:px-8 2xl:py-5',
                     {
                       'text-center': column.align === 'center',
                       'text-right': column.align === 'right',

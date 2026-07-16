@@ -46,14 +46,30 @@
     "download": "Download",
     "more": "More",
     "view": "View",
+    "re-export": "Re-export",
     "table-title": {
       "video": "Video",
+      "clip": "Clip",
+      "project": "Project",
+      "format": "Format",
+      "resolution": "Resolution",
+      "exportedOn": "Exported On",
+      "size": "Size",
       "duration": "Duration",
       "uploaded": "Uploaded",
       "status": "Status",
       "clips": "Clips",
       "actions": "Actions"
-    }
+    },
+    "processing": "Proccessing",
+    "ready": "Ready",
+    "published": "Published",
+    "completed": "Completed",
+    "exported": "Exported",
+    "failed": "Failed",
+    "select-date": "Select Date",
+    "mp4": "MP4",
+    "mov": "MOV"
   },
   "overview": {
     "title": "Welcome back, Marcus!👋",
@@ -104,7 +120,9 @@
     "clip8-title": "How I automate 80% of my content workflow.",
     "clip9-title": "Youre Doing Productivity Wrong.",
     "clip10-title": "Most People Ignore This Productivity Trick.",
-    "clip11-title": "The Secret to Getting More Done."
+    "clip11-title": "The Secret to Getting More Done.",
+    "clip12-title": "Top 3 Productivity Tips for Creators.",
+    "clip13-title": "How I built my $0 to $10K SaaS journey."
   },
   "projects": {
     "title": "Projects",
@@ -152,5 +170,16 @@
     "business-look": "Business Look",
     "quote-style": "Quote Style",
     "story-highlight": "Story Highlight"
+  },
+  "export": {
+    "export-history": "Export History",
+    "caption": "View and all manage your exported clips.",
+    "how-export-works": "How Export Works",
+    "total-exports": "Total Exports",
+    "total-clips-exported": "Total Clips Exported",
+    "total-export-time-saved": "Total Export Time Saved",
+    "storage-used": "Storage Used",
+    "search-exports": "Search exports...",
+    "stat-subtitle": "vs last 30 days"
   }
 }
