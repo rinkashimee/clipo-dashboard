@@ -118,3 +118,38 @@ export const EXPORT_STATUS_OPTIONS = [
     value: 'failed',
   },
 ];
+
+export const LANGUAGE_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.language.en', value: 'en' },
+  { labelKey: 'common.language.ja', value: 'ja' },
+  { labelKey: 'common.language.ko', value: 'ko' },
+  { labelKey: 'common.language.es', value: 'es' },
+  { labelKey: 'common.language.fr', value: 'fr' },
+  { labelKey: 'common.language.de', value: 'de' },
+  { labelKey: 'common.language.pt', value: 'pt' },
+  { labelKey: 'common.language.fil', value: 'fil' },
+];
+
+export const THEME_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.theme.light', value: 'light' },
+  { labelKey: 'common.theme.dark', value: 'dark' },
+  { labelKey: 'common.theme.system', value: 'system' },
+];
+
+export const TIMEZONE_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.time-zone.la', value: 'America/Los_Angeles' },
+  { labelKey: 'common.time-zone.denver', value: 'America/Denver' },
+  { labelKey: 'common.time-zone.chicago', value: 'America/Chicago' },
+  { labelKey: 'common.time-zone.ny', value: 'America/New_York' },
+  { labelKey: 'common.time-zone.utc', value: 'UTC' },
+  { labelKey: 'common.time-zone.singapore', value: 'Asia/Singapore' },
+  { labelKey: 'common.time-zone.manila', value: 'Asia/Manila' },
+  { labelKey: 'common.time-zone.tokyo', value: 'Asia/Tokyo' },
+  { labelKey: 'common.time-zone.seoul', value: 'Asia/Seoul' },
+];
+
+export const LAYOUT_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.layouts.grid', value: 'grid' },
+  { labelKey: 'common.layouts.list', value: 'list' },
+  { labelKey: 'common.layouts.compact', value: 'compact' },
+];

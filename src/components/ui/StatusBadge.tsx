@@ -6,11 +6,12 @@ import type { StatusBadgeTypes } from '@/types/ClipoCommonTypes';
 import { useTranslation } from 'react-i18next';
 
 interface StatusBadgeProps {
+  label?: string;
   status: StatusBadgeTypes;
   showIcon?: boolean;
 }
 
-export default function StatusBadge({ status, showIcon = false }: StatusBadgeProps) {
+export default function StatusBadge({ status, label, showIcon = false }: StatusBadgeProps) {
   const { t } = useTranslation();
 
   const statusConfig: Record<
@@ -80,7 +81,7 @@ export default function StatusBadge({ status, showIcon = false }: StatusBadgePro
       {showIcon == true && (
         <ClipIcons icon={config.icon} size={config.iconSize} color={colors[config.textColor]} />
       )}
-      {config.label}
+      {label ? label : config.label}
     </Typography>
   );
 }

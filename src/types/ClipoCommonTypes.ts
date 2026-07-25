@@ -1,4 +1,5 @@
 import type { IconType } from '@/components/icons/ClipIcons';
+import type { ParseKeys } from 'i18next';
 import type { ReactNode } from 'react';
 
 export type StatusBadgeTypes =
@@ -21,7 +22,8 @@ export interface ChartDataTypes {
 }
 
 export interface OptionTypes {
-  label: ReactNode;
+  label?: ReactNode;
+  labelKey?: ParseKeys;
   value: string;
 }
 
@@ -69,3 +71,11 @@ export type DateRangeTypes = {
   from: Date | undefined;
   to?: Date;
 };
+
+export interface SettingsSidebarItemTypes {
+  key: string;
+  label: string;
+  description: string;
+  icon: IconType;
+  path: string;
+}

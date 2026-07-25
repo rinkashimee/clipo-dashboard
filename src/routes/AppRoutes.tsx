@@ -1,9 +1,11 @@
+import AccountSettings from '@/components/dashboard/settings/accounts/AccountSettings';
 import DashboardLayout from '@/layouts/DashboardLayout';
 import Analytics from '@/pages/dashboard/Analytics';
 import ClipResults from '@/pages/dashboard/ClipResults';
 import ExportHistory from '@/pages/dashboard/ExportHistory';
 import Overview from '@/pages/dashboard/Overview';
 import Projects from '@/pages/dashboard/Projects';
+import Settings from '@/pages/dashboard/Setting';
 import Templates from '@/pages/dashboard/Templates';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
@@ -19,7 +21,18 @@ export default function AppRoutes() {
         <Route path="/analytics" element={<Analytics />} />
         <Route path="/templates" element={<Templates />} />
         <Route path="/export-history" element={<ExportHistory />} />
-        <Route path="/settings" element={<Overview />} />
+        <Route path="/settings" element={<Settings />}>
+          <Route index element={<Navigate to="account" replace />} />
+
+          <Route path="account" element={<AccountSettings />} />
+          <Route path="subscription" element={<AccountSettings />} />
+          <Route path="preferences" element={<AccountSettings />} />
+          <Route path="export" element={<AccountSettings />} />
+          <Route path="storage" element={<AccountSettings />} />
+          <Route path="notifications" element={<AccountSettings />} />
+          <Route path="security" element={<AccountSettings />} />
+          <Route path="billing" element={<AccountSettings />} />
+        </Route>
       </Route>
     </Routes>
   );

@@ -8,6 +8,7 @@ import useDropdownOutsideClick from '@/hooks/DropdownOutsideClick';
 import { ClipIcons, type IconType } from '@/components/icons/ClipIcons';
 import Tooltip from '../Tooltip';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface DropdownProps {
   value: string;
@@ -18,6 +19,7 @@ interface DropdownProps {
   prefix?: ReactNode;
   width?: number;
   className?: string;
+  listClassName?: string;
 
   icon?: IconType;
   color?: string;
@@ -40,9 +42,12 @@ export default function Dropdown(props: DropdownProps) {
     color,
     size,
     iconClassName,
+    listClassName,
     showIcon = false,
     showTooltip = false,
   } = props;
+
+  const { t } = useTranslation();
 
   const [open, setOpen] = useState(false);
 
@@ -72,7 +77,7 @@ export default function Dropdown(props: DropdownProps) {
         cursor="pointer"
         className="block w-full truncate text-left"
       >
-        {item.label}
+        {item.labelKey ? t(item.labelKey) : item.label}
       </Typography>
     </Button>
   );
@@ -107,13 +112,20 @@ export default function Dropdown(props: DropdownProps) {
             cursor="pointer"
             className="flex-1 truncate"
           >
-            {selectedItem?.label ?? placeholder}
+            {selectedItem?.labelKey
+              ? t(selectedItem.labelKey)
+              : (selectedItem?.label ?? placeholder)}
           </Typography>
         </div>
       </Button>
 
       {open && (
-        <div className="border-default shadow-default no-scrollbar absolute top-full z-50 mt-1 max-h-100 w-full overflow-y-auto rounded-md bg-white">
+        <div
+          className={clsx(
+            'border-default shadow-default no-scrollbar absolute top-full z-50 mt-1 max-h-100 w-full overflow-y-auto rounded-md bg-white',
+            listClassName
+          )}
+        >
           {items.map((item) => (
             <React.Fragment key={item.value}>
               {showTooltip ? (

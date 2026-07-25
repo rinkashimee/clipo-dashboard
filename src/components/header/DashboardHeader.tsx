@@ -6,6 +6,7 @@ import NotificationButton from './NotificationButton';
 import UserAvatar from './UserAvatar';
 import CreateTemplateButton from './CreateTemplateButton';
 import ExportGuide from './ExportGuide';
+import HelpCenter from './HelpCenter';
 
 interface DashboardHeaderProps {
   title: string;
@@ -14,6 +15,7 @@ interface DashboardHeaderProps {
   showAnalyticsBtn?: boolean;
   showTemplateBtn?: boolean;
   showExportGuideBtn?: boolean;
+  showHelpCenterBtn?: boolean;
   value?: string;
   dropdownData?: OptionTypes[];
   onChange?: (value: string) => void;
@@ -29,6 +31,7 @@ export default function DashboardHeader(props: DashboardHeaderProps) {
     showAnalyticsBtn = false,
     showTemplateBtn = false,
     showExportGuideBtn = false,
+    showHelpCenterBtn = false,
     onChange,
   } = props;
 
@@ -51,6 +54,7 @@ export default function DashboardHeader(props: DashboardHeaderProps) {
         )}
         {showTemplateBtn && <CreateTemplateButton />}
         {showExportGuideBtn && <ExportGuide />}
+        {showHelpCenterBtn && <HelpCenter />}
         <NotificationButton />
         <UserAvatar />
       </div>

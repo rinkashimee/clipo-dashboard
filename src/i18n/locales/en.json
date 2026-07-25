@@ -12,7 +12,25 @@
     "desc": "You have unlimited exports and priority processing.",
     "btn-upgrade": "Upgrade Plan",
     "username": "Marcus Lee",
-    "email": "marcuslee@mail.com"
+    "email": "marcuslee@mail.com",
+    "setting-sidebar": {
+      "account": "Account",
+      "account-desc": "Profile and account details",
+      "subscription": "Subscription",
+      "subs-desc": "Manage your plan",
+      "preferences": "Preferences",
+      "pref-desc": "General app preferences",
+      "export-setting": "Export Settings",
+      "export-desc": "Default export preferences",
+      "storage": "Storage",
+      "storage-desc": "Manage your storage",
+      "notification": "Notifications",
+      "notif-desc": "Email and push notifications",
+      "security": "Security",
+      "security-desc": "Password and 2FA",
+      "billing": "Billing",
+      "bill-desc": "Payment methods and invoices"
+    }
   },
   "common": {
     "total-views": "Total Views",
@@ -47,6 +65,10 @@
     "more": "More",
     "view": "View",
     "re-export": "Re-export",
+    "active": "Active",
+    "manage-sub": "Manage Subscription",
+    "manage-storage": "Manage Storage",
+    "delete-account": "Delete Account",
     "table-title": {
       "video": "Video",
       "clip": "Clip",
@@ -69,7 +91,39 @@
     "failed": "Failed",
     "select-date": "Select Date",
     "mp4": "MP4",
-    "mov": "MOV"
+    "mov": "MOV",
+    "edit-profile": "Edit Profile",
+    "language": {
+      "en": "English",
+      "ja": "Japanese",
+      "ko": "Korean",
+      "es": "Spanish",
+      "fr": "French",
+      "de": "German",
+      "pt": "Portuguese",
+      "fil": "Filipino"
+    },
+    "theme": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "time-zone": {
+      "la": "(GMT-08:00) Pacific Time",
+      "denver": "(GMT-07:00) Mountain Time",
+      "chicago": "(GMT-06:00) Central Time",
+      "ny": "(GMT-05:00) Eastern Time",
+      "utc": "(GMT+00:00) UTC",
+      "singapore": "(GMT+08:00) Singapore",
+      "manila": "(GMT+08:00) Manila",
+      "tokyo": "(GMT+09:00) Tokyo",
+      "seoul": "(GMT+09:00) Seoul"
+    },
+    "layouts": {
+      "grid": "Grid View",
+      "list": "List View",
+      "compact": "Compact View"
+    }
   },
   "overview": {
     "title": "Welcome back, Marcus!👋",
@@ -181,5 +235,55 @@
     "storage-used": "Storage Used",
     "search-exports": "Search exports...",
     "stat-subtitle": "vs last 30 days"
+  },
+  "settings": {
+    "setting": "Settings",
+    "caption": "Manage your account, preferences and app settings.",
+    "help-center": "Help Center",
+    "account": {
+      "account-info": " Account Information",
+      "member-since": "Member Since: {{date}}"
+    },
+    "preferences": {
+      "pref": "Preferences",
+      "language": "Language",
+      "choose-preferred": "Choose your preferred language",
+      "theme": "Theme",
+      "select-theme": "Select your preferred theme",
+      "time-zone": "Time Zone",
+      "set-time": "Set your current time zone",
+      "default-view": "Default Project View",
+      "choose-view": "Choose the default view for projects"
+    },
+    "other-settings": {
+      "other": "Other Settings",
+      "auto-save": "Auto-save projects",
+      "automatically": "Automatically save your projects as you work",
+      "keep-original": "Keep Original uploads",
+      "store": "Store original uploaded videos for reprocessing",
+      "auto-delete": "Auto delete expired files",
+      "delete-files": "Automatically delete files older than 30 days"
+    },
+    "subscription": {
+      "subs": "Subscription",
+      "feature1": "Unlimited videos uploads",
+      "feature2": "Unlimited AI clip generations",
+      "feature3": "Unlimited exports",
+      "feature4": "Export 1080p",
+      "feature5": "Advanced analytics",
+      "feature6": "Premium templates",
+      "manage-subs": "Manage Subscription",
+      "pro-plan": "Pro Plan"
+    },
+    "storage-usage": {
+      "usage": "Storage Usage",
+      "use-gb": "{{currentUsage}} GB",
+      "total-use": "/ {{total}} GB used"
+    },
+    "danger-zone": {
+      "danger": "Danger Zone",
+      "delete-acc": "Delete Account",
+      "desc": "Permanently delete your account and all of your data."
+    }
   }
 }
