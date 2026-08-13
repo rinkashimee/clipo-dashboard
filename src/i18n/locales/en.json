@@ -64,11 +64,27 @@
     "download": "Download",
     "more": "More",
     "view": "View",
+    "update": "Update",
+    "default": "Default",
+    "invoices": "View All Invoices",
     "re-export": "Re-export",
     "active": "Active",
     "manage-sub": "Manage Subscription",
     "manage-storage": "Manage Storage",
     "delete-account": "Delete Account",
+    "upgrade-plan": "Upgrade Plan",
+    "cancel-sub": "Cancel Subscription",
+    "new-payment-method": "Add New Payment Method",
+    "min-process": "Minutes Processed",
+    "exports": "Exports",
+    "storage": "Storage",
+    "sub-plan": {
+      "plan": "{{plan}}",
+      "price": "${{price}}",
+      "billing": "/ {{billing}}",
+      "renew": "Renews on {{renew}}",
+      "active": "Your plan is active"
+    },
     "table-title": {
       "video": "Video",
       "clip": "Clip",
@@ -81,6 +97,9 @@
       "uploaded": "Uploaded",
       "status": "Status",
       "clips": "Clips",
+      "date": "Date",
+      "invoice": "Invoice",
+      "amount": "Amount",
       "actions": "Actions"
     },
     "processing": "Proccessing",
@@ -89,6 +108,8 @@
     "completed": "Completed",
     "exported": "Exported",
     "failed": "Failed",
+    "paid": "Paid",
+    "pending": "Pending",
     "select-date": "Select Date",
     "mp4": "MP4",
     "mov": "MOV",
@@ -267,11 +288,17 @@
     "subscription": {
       "subs": "Subscription",
       "feature1": "Unlimited videos uploads",
+      "desc1": "Upload videos as many you want",
       "feature2": "Unlimited AI clip generations",
+      "desc2": "Generate clip as many you want",
       "feature3": "Unlimited exports",
+      "desc3": "Export as many videos as you want",
       "feature4": "Export 1080p",
+      "desc4": "High quality exports up to 1080p",
       "feature5": "Advanced analytics",
+      "desc5": "Detailed insights and performance",
       "feature6": "Premium templates",
+      "desc6": "Access all premium templates",
       "manage-subs": "Manage Subscription",
       "pro-plan": "Pro Plan"
     },
@@ -284,6 +311,25 @@
       "danger": "Danger Zone",
       "delete-acc": "Delete Account",
       "desc": "Permanently delete your account and all of your data."
+    },
+    "current-plan": {
+      "plan": "Current Plan",
+      "plan-includes": "Your Plan Includes"
+    },
+    "usage": {
+      "title": "Usage"
+    },
+    "billing-history": {
+      "bill-history": "Billing History"
+    },
+    "included-features": {
+      "title": "Included Features"
+    },
+    "payment": {
+      "title": "Payment Method",
+      "card": "{{type}} •••• {{last4}}",
+      "expiry": "Expires {{date}}",
+      "visa": "VISA"
     }
   }
 }

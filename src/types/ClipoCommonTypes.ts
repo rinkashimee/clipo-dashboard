@@ -8,7 +8,10 @@ export type StatusBadgeTypes =
   | 'exported'
   | 'failed'
   | 'published'
-  | 'completed';
+  | 'completed'
+  | 'paid'
+  | 'pending'
+  | 'default';
 
 export type FormatBadgeTypes = 'mp4' | 'mov';
 

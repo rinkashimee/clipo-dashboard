@@ -8,10 +8,20 @@ interface TableProps<T> {
   data: T[];
   pagination?: false | TablePaginationTypes;
   tableWrapperClassName?: string;
+  tableHeaderClassName?: string;
+  tableColumnClassName?: string;
 }
 
 export default function Table<T>(props: TableProps<T>) {
-  const { rowKey, columns, data, pagination, tableWrapperClassName } = props;
+  const {
+    rowKey,
+    columns,
+    data,
+    pagination,
+    tableWrapperClassName,
+    tableHeaderClassName,
+    tableColumnClassName,
+  } = props;
 
   return (
     <div
@@ -35,7 +45,9 @@ export default function Table<T>(props: TableProps<T>) {
                   key={column.key}
                   style={{ width: column.width }}
                   className={clsx(
-                    'table-b-border body-sm sticky top-0 z-10 bg-[#F3F3F4] px-4 py-3 text-left text-[var(--neutral-500)] xl:px-8 xl:py-[18px] 2xl:px-8 2xl:py-5',
+                    'table-b-border body-sm sticky top-0 z-10 bg-[#F3F3F4] px-4 py-3 text-left text-[var(--neutral-500)]',
+                    !tableHeaderClassName && 'xl:px-8 xl:py-[18px] 2xl:px-8 2xl:py-5',
+                    tableHeaderClassName,
                     {
                       'text-center': column.align === 'center',
                       'text-right': column.align === 'right',
@@ -60,10 +72,15 @@ export default function Table<T>(props: TableProps<T>) {
                     return (
                       <td
                         key={column.key}
-                        className={clsx('px-4 py-2 xl:px-8 xl:py-[14px] 2xl:px-8 2xl:py-4', {
-                          'text-center': column.align === 'center',
-                          'text-right': column.align === 'right',
-                        })}
+                        className={clsx(
+                          'px-4 py-2',
+                          !tableColumnClassName && 'xl:px-8 xl:py-[14px] 2xl:px-8 2xl:py-4',
+                          tableColumnClassName,
+                          {
+                            'text-center': column.align === 'center',
+                            'text-right': column.align === 'right',
+                          }
+                        )}
                       >
                         {column.render
                           ? column.render(value, record, rowIndex)

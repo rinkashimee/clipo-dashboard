@@ -214,7 +214,7 @@ html {
     border-bottom: 1px solid rgba(145, 148, 157, 0.2);
   }
 
-  .new-template-border {
+  .dash-border {
     border: 1px dashed var(--primary-500);
   }
 

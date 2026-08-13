@@ -9,9 +9,15 @@ interface StatusBadgeProps {
   label?: string;
   status: StatusBadgeTypes;
   showIcon?: boolean;
+  customClassName?: string;
 }
 
-export default function StatusBadge({ status, label, showIcon = false }: StatusBadgeProps) {
+export default function StatusBadge({
+  status,
+  label,
+  showIcon = false,
+  customClassName,
+}: StatusBadgeProps) {
   const { t } = useTranslation();
 
   const statusConfig: Record<
@@ -66,6 +72,27 @@ export default function StatusBadge({ status, label, showIcon = false }: StatusB
       icon: 'XIcon',
       iconSize: 13.5,
     },
+    paid: {
+      label: t('common.paid'),
+      textColor: 'success500',
+      className: 'bg-[var(--success-100)]',
+      icon: 'CheckIcon',
+      iconSize: 13.5,
+    },
+    pending: {
+      label: t('common.pending'),
+      textColor: 'warning500',
+      className: 'bg-[var(--warning-100)]',
+      icon: 'XIcon',
+      iconSize: 13.5,
+    },
+    default: {
+      label: t('common.default'),
+      textColor: 'success500',
+      className: 'bg-[var(--success-100)]',
+      icon: 'CheckIcon',
+      iconSize: 13.5,
+    },
   };
 
   const config = statusConfig[status];
@@ -76,7 +103,12 @@ export default function StatusBadge({ status, label, showIcon = false }: StatusB
       variant="caption"
       color={config.textColor}
       cursor="default"
-      className={clsx('inline-flex items-center gap-2 rounded px-[10px] py-2', config.className)}
+      className={clsx(
+        'inline-flex items-center gap-2 rounded px-[10px]',
+        !customClassName && 'py-2',
+        customClassName,
+        config.className
+      )}
     >
       {showIcon == true && (
         <ClipIcons icon={config.icon} size={config.iconSize} color={colors[config.textColor]} />

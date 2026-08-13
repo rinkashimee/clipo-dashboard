@@ -1,4 +1,5 @@
 import AccountSettings from '@/components/dashboard/settings/accounts/AccountSettings';
+import SubscriptionSettings from '@/components/dashboard/settings/subscription/SubscriptionSettings';
 import DashboardLayout from '@/layouts/DashboardLayout';
 import Analytics from '@/pages/dashboard/Analytics';
 import ClipResults from '@/pages/dashboard/ClipResults';
@@ -25,7 +26,7 @@ export default function AppRoutes() {
           <Route index element={<Navigate to="account" replace />} />
 
           <Route path="account" element={<AccountSettings />} />
-          <Route path="subscription" element={<AccountSettings />} />
+          <Route path="subscription" element={<SubscriptionSettings />} />
           <Route path="preferences" element={<AccountSettings />} />
           <Route path="export" element={<AccountSettings />} />
           <Route path="storage" element={<AccountSettings />} />
