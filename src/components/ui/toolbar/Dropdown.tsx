@@ -11,7 +11,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface DropdownProps {
-  value: string;
+  value?: string;
   items: OptionTypes[];
   onChange?: (value: string) => void;
 
@@ -27,6 +27,7 @@ interface DropdownProps {
   iconClassName?: string;
   showIcon?: boolean;
   showTooltip?: boolean;
+  placement?: 'bottom' | 'top';
 }
 
 export default function Dropdown(props: DropdownProps) {
@@ -45,6 +46,7 @@ export default function Dropdown(props: DropdownProps) {
     listClassName,
     showIcon = false,
     showTooltip = false,
+    placement = 'bottom',
   } = props;
 
   const { t } = useTranslation();
@@ -122,7 +124,8 @@ export default function Dropdown(props: DropdownProps) {
       {open && (
         <div
           className={clsx(
-            'border-default shadow-default no-scrollbar absolute top-full z-50 mt-1 max-h-100 w-full overflow-y-auto rounded-md bg-white',
+            'border-default shadow-default no-scrollbar absolute z-50 max-h-100 w-full overflow-y-auto rounded-md bg-white',
+            placement === 'bottom' ? 'top-full mt-1' : 'bottom-full mb-1',
             listClassName
           )}
         >

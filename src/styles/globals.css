@@ -245,6 +245,11 @@ html {
     scrollbar-width: auto;
   }
 
+  .divider {
+    height: 1px;
+    background: rgba(145, 148, 157, 0.2);
+  }
+
   @keyframes marquee {
     from {
       transform: translateX(0);

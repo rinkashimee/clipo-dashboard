@@ -5,12 +5,14 @@ import type { ReactNode } from 'react';
 
 interface SettingItemProps {
   size?: number;
-  icon: IconType;
+  icon?: IconType;
   iconColor?: Color;
 
   label: string;
   caption: string;
   children: ReactNode;
+  hidden?: boolean;
+  hideIcon?: boolean;
 }
 
 export default function SettingItem(props: SettingItemProps) {
@@ -21,11 +23,13 @@ export default function SettingItem(props: SettingItemProps) {
     label,
     caption,
     children,
+    hidden,
+    hideIcon,
   } = props;
   return (
-    <div className="flex items-center justify-between">
-      <div className="flex items-center gap-3 py-3">
-        <ClipIcons size={size} icon={icon} color={iconColor} />
+    <div className="flex items-center justify-between" hidden={hidden}>
+      <div className="flex items-center gap-3 py-1.5">
+        {!hideIcon && <ClipIcons size={size} icon={icon} color={iconColor} />}
 
         <div className="flex-1">
           <Typography variant="body-sm" cursor="default" color="neutral500">

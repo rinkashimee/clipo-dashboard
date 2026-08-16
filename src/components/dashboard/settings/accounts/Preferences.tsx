@@ -5,27 +5,31 @@ import { Typography } from '@/components/ui/Typography';
 import {
   LANGUAGE_OPTIONS,
   LAYOUT_OPTIONS,
+  PAGES_OPTIONS,
   THEME_OPTIONS,
   TIMEZONE_OPTIONS,
 } from '@/constants/ConstantData';
 import { colors } from '@/lib/colors/colors';
-import { useState } from 'react';
+import type { SettingFilterTypes } from '@/types/SettingTypes';
+import { type Dispatch, type SetStateAction } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export default function Preferences() {
-  const { t } = useTranslation();
+interface PreferencesProps {
+  title?: string;
+  dropdownFilter: SettingFilterTypes;
+  setDropdownFilter: Dispatch<SetStateAction<SettingFilterTypes>>;
+  hideDefaultPage: boolean;
+}
 
-  const [dropdownFilter, setDropdownFilter] = useState({
-    language: 'en',
-    theme: 'system',
-    timeZone: 'America/Los_Angeles',
-    layout: 'grid',
-  });
+export default function Preferences(props: PreferencesProps) {
+  const { title, dropdownFilter, setDropdownFilter, hideDefaultPage } = props;
+
+  const { t } = useTranslation();
 
   return (
     <SettingCard className="px-6 xl:py-5 2xl:py-6">
       <Typography as="span" variant="body-md" color="neutral900" cursor="default">
-        {t('settings.preferences.pref')}
+        {title ? title : t('settings.preferences.pref')}
       </Typography>
 
       <div className="mt-2 space-y-1">
@@ -80,7 +84,7 @@ export default function Preferences() {
         >
           <Dropdown
             size={18}
-            width={260}
+            width={220}
             showIcon={true}
             icon="ClockIcon"
             listClassName="h-80"
@@ -103,7 +107,7 @@ export default function Preferences() {
         >
           <Dropdown
             size={18}
-            width={180}
+            width={160}
             showIcon={true}
             icon="SquaresFourIcon"
             items={LAYOUT_OPTIONS}
@@ -113,6 +117,29 @@ export default function Preferences() {
               setDropdownFilter((prev) => ({
                 ...prev,
                 layout: value,
+              }))
+            }
+          />
+        </SettingItem>
+
+        <SettingItem
+          icon="TableIcon"
+          hidden={hideDefaultPage}
+          label={t('settings.preferences.default-page')}
+          caption={t('settings.preferences.choose-page')}
+        >
+          <Dropdown
+            size={18}
+            width={160}
+            showIcon={true}
+            icon="SquaresFourIcon"
+            items={PAGES_OPTIONS}
+            value={dropdownFilter.page ?? ''}
+            color={colors.neutral500}
+            onChange={(value) =>
+              setDropdownFilter((prev) => ({
+                ...prev,
+                page: value,
               }))
             }
           />

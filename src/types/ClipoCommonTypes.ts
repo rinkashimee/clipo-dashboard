@@ -82,3 +82,8 @@ export interface SettingsSidebarItemTypes {
   icon: IconType;
   path: string;
 }
+
+export interface ColorPickerOption {
+  value: string;
+  color: string;
+}

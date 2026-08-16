@@ -46,3 +46,7 @@ export function getAnalyticsData<
       return [];
   }
 }
+
+export const getColorVariable = (variable: string) => {
+  return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+};
