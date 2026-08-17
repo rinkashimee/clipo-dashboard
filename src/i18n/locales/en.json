@@ -78,6 +78,7 @@
     "min-process": "Minutes Processed",
     "exports": "Exports",
     "storage": "Storage",
+    "add-preset": "Add Preset",
     "sub-plan": {
       "plan": "{{plan}}",
       "price": "${{price}}",
@@ -195,6 +196,68 @@
       "high": "High",
       "medium": "Medium",
       "low": "Low"
+    },
+    "resolution": {
+      "720p": "720p (HD)",
+      "1080p": "1080p (Full HD)",
+      "1440p": "1440p (2K)",
+      "2160p": "2160p (4K)"
+    },
+    "framerate": {
+      "24": "24 FPS",
+      "30": "30 FPS",
+      "60": "60 FPS"
+    },
+    "video-quality": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "ultra": "Ultra"
+    },
+    "codec": {
+      "h264": "H.264",
+      "h265": "H.265 (HEVC)",
+      "vp9": "VP9",
+      "av1": "AV1"
+    },
+    "bitrate": {
+      "5": "5 Mbps",
+      "10": "10 Mbps",
+      "15": "15 Mbps",
+      "20": "20 Mbps",
+      "25": "25 Mbps"
+    },
+    "audio-quality": {
+      "128": "Low (128 kbps)",
+      "192": "Medium (192 kbps)",
+      "320": "High (320 kbps)"
+    },
+    "sample-rate": {
+      "44.1": "44.1 kHz",
+      "48": "48 kHz",
+      "96": "96 kHz"
+    },
+    "channels": {
+      "mono": "Mono",
+      "stereo": "Stereo",
+      "5.1": "5.1 Surround"
+    },
+    "file-format": {
+      "mp4": "MP4",
+      "mov": "MOV",
+      "webm": "WebM"
+    },
+    "filename-format": {
+      "name-date": "Name - Date",
+      "name-date-time": "Name - Date - Time",
+      "name": "Name Only",
+      "date-name": "Date - Name"
+    },
+    "save-location-format": {
+      "ask-every-time": "Ask me every time",
+      "downloads": "Downloads",
+      "documents": "Documents",
+      "desktop": "Desktop"
     }
   },
   "overview": {
@@ -428,6 +491,53 @@
       "automatically-detect": "Automatically detect highlights in long videos",
       "smart-suggestions": "Smart Suggestions",
       "show-ai": "Show AI-powered suggestions in editor"
+    },
+    "video-setting": {
+      "title": "Video Settings",
+      "resolution": "Resolution",
+      "choose-resolution": "Choose the default resolution",
+      "framerate": "Frame Rate",
+      "set-framerate": "Set the default frame rate",
+      "video-quality": "Video Quality",
+      "adjust-quality": "Adjust the default video quality",
+      "codec": "Codec",
+      "choose-codec": "Choose the video codec",
+      "bitrate": "Bitrate",
+      "set-bitrate": "Set the default bitrate"
+    },
+    "export-preview": {
+      "title": "Export Preview",
+      "duration": "00:00 / {{duration}}",
+      "resolution": "Resolution",
+      "framerate": "Frame Rate",
+      "estimated-size": "Estimated Size",
+      "preview-caption": "Preview is an estimate. Final export may vary."
+    },
+    "audio-settings": {
+      "title": "Audio Settings",
+      "audio-quality": "Audio Quality",
+      "set-audio": "Set the default audio quality",
+      "sample-rate": "Sample Rate",
+      "choose-sample-rate": "Choose the sample rate",
+      "channels": "Channels",
+      "select-channels": "Select audio channels",
+      "noise-reduction": "Noise Reduction",
+      "apply-reduction": "Apply noise reduction by default"
+    },
+    "file-settings": {
+      "title": "File Settings",
+      "file-format": "File Format",
+      "choose-format": "Choose the default file format",
+      "filename-format": "File Name Format",
+      "set-naming": "Set the default naming format",
+      "save-location": "Save Location",
+      "choose-save-exports": "Choose where to save exports",
+      "add-water-mark": "Add watermark to exports",
+      "include-brand": "Include brand watermark in exported videos"
+    },
+    "export-presets": {
+      "title": "Export Presets",
+      "caption": "Create and manage presets for different platforms."
     }
   }
 }

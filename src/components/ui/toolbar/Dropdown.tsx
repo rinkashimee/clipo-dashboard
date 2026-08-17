@@ -112,7 +112,7 @@ export default function Dropdown(props: DropdownProps) {
             variant="body-sm"
             color="neutral500"
             cursor="pointer"
-            className="flex-1 truncate"
+            className="flex-1 truncate text-left"
           >
             {selectedItem?.labelKey
               ? t(selectedItem.labelKey)

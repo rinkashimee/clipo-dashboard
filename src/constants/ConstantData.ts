@@ -1,4 +1,3 @@
-import { colors } from '@/lib/colors/colors';
 import type { ColorPickerOption, OptionTypes } from '@/types/ClipoCommonTypes';
 import { getColorVariable } from '@/utils/ClipoUtils';
 
@@ -221,4 +220,77 @@ export const PROCESSING_QUALITY_OPTIONS: OptionTypes[] = [
   { labelKey: 'common.processing-quality.high', value: 'high' },
   { labelKey: 'common.processing-quality.medium', value: 'medium' },
   { labelKey: 'common.processing-quality.low', value: 'low' },
+];
+
+export const RESOLUTION_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.resolution.720p', value: '720p' },
+  { labelKey: 'common.resolution.1080p', value: '1080p' },
+  { labelKey: 'common.resolution.1440p', value: '1440p' },
+  { labelKey: 'common.resolution.2160p', value: '2160p' },
+];
+
+export const FRAMERATE_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.framerate.24', value: '24' },
+  { labelKey: 'common.framerate.30', value: '30' },
+  { labelKey: 'common.framerate.60', value: '60' },
+];
+
+export const VIDEO_QUALITY_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.video-quality.low', value: 'low' },
+  { labelKey: 'common.video-quality.medium', value: 'medium' },
+  { labelKey: 'common.video-quality.high', value: 'high' },
+  { labelKey: 'common.video-quality.ultra', value: 'ultra' },
+];
+
+export const CODEC_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.codec.h264', value: 'h264' },
+  { labelKey: 'common.codec.h265', value: 'h265' },
+  { labelKey: 'common.codec.vp9', value: 'vp9' },
+  { labelKey: 'common.codec.av1', value: 'av1' },
+];
+
+export const BITRATE_OPTIONS: OptionTypes[] = [
+  { label: '5 Mbps', value: '5' },
+  { label: '10 Mbps', value: '10' },
+  { label: '15 Mbps', value: '15' },
+  { label: '20 Mbps', value: '20' },
+  { label: '25 Mbps', value: '25' },
+];
+
+export const AUDIO_QUALITY_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.audio-quality.128', value: '128' },
+  { labelKey: 'common.audio-quality.192', value: '192' },
+  { labelKey: 'common.audio-quality.320', value: '320' },
+];
+
+export const SAMPLE_RATE_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.sample-rate.44.1', value: '44.1' },
+  { labelKey: 'common.sample-rate.48', value: '48' },
+  { labelKey: 'common.sample-rate.96', value: '96' },
+];
+
+export const CHANNEL_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.channels.mono', value: 'mono' },
+  { labelKey: 'common.channels.stereo', value: 'stereo' },
+  { labelKey: 'common.channels.5.1', value: '5.1' },
+];
+
+export const FILE_FORMAT_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.file-format.mp4', value: 'mp4' },
+  { labelKey: 'common.file-format.mov', value: 'mov' },
+  { labelKey: 'common.file-format.webm', value: 'webm' },
+];
+
+export const FILENAME_FORMAT_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.filename-format.name-date', value: 'name-date' },
+  { labelKey: 'common.filename-format.name-date-time', value: 'name-date-time' },
+  { labelKey: 'common.filename-format.name', value: 'name' },
+  { labelKey: 'common.filename-format.date-name', value: 'date-name' },
+];
+
+export const SAVE_LOCATION_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.save-location-format.ask-every-time', value: 'ask-every-time' },
+  { labelKey: 'common.save-location-format.downloads', value: 'downloads' },
+  { labelKey: 'common.save-location-format.documents', value: 'documents' },
+  { labelKey: 'common.save-location-format.desktop', value: 'desktop' },
 ];

@@ -1,4 +1,5 @@
 import AccountSettings from '@/components/dashboard/settings/accounts/AccountSettings';
+import ExportSettings from '@/components/dashboard/settings/export-settings/ExportSettings';
 import PreferenceSettings from '@/components/dashboard/settings/Preferences/PreferenceSettings';
 import SubscriptionSettings from '@/components/dashboard/settings/subscription/SubscriptionSettings';
 import DashboardLayout from '@/layouts/DashboardLayout';
@@ -29,7 +30,7 @@ export default function AppRoutes() {
           <Route path="account" element={<AccountSettings />} />
           <Route path="subscription" element={<SubscriptionSettings />} />
           <Route path="preferences" element={<PreferenceSettings />} />
-          <Route path="export" element={<AccountSettings />} />
+          <Route path="export" element={<ExportSettings />} />
           <Route path="storage" element={<AccountSettings />} />
           <Route path="notifications" element={<AccountSettings />} />
           <Route path="security" element={<AccountSettings />} />

@@ -13,6 +13,7 @@ interface SettingItemProps {
   children: ReactNode;
   hidden?: boolean;
   hideIcon?: boolean;
+  customLeftItem?: ReactNode;
 }
 
 export default function SettingItem(props: SettingItemProps) {
@@ -25,11 +26,14 @@ export default function SettingItem(props: SettingItemProps) {
     children,
     hidden,
     hideIcon,
+    customLeftItem,
   } = props;
   return (
     <div className="flex items-center justify-between" hidden={hidden}>
       <div className="flex items-center gap-3 py-1.5">
-        {!hideIcon && <ClipIcons size={size} icon={icon} color={iconColor} />}
+        {customLeftItem
+          ? customLeftItem
+          : !hideIcon && <ClipIcons size={size} icon={icon} color={iconColor} />}
 
         <div className="flex-1">
           <Typography variant="body-sm" cursor="default" color="neutral500">

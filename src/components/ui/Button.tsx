@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import type { ButtonHTMLAttributes } from 'react';
 import { ClipIcons, type IconType } from '../icons/ClipIcons';
 import { colors } from '@/lib/colors/colors';
+import type { Icon } from '@phosphor-icons/react';
 
 type ButtonVariant = 'primary' | 'secondary' | 'custom';
 type IconPosition = 'left' | 'right';
@@ -13,6 +14,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: number;
   color?: string;
   iconClassName?: string;
+  weight?: React.ComponentProps<Icon>['weight'];
 }
 
 export function Button({
@@ -25,10 +27,11 @@ export function Button({
   iconClassName,
   children,
   disabled,
+  weight,
   ...props
 }: ButtonProps) {
   const iconElement = icon && (
-    <ClipIcons icon={icon} size={size} color={color} className={iconClassName} />
+    <ClipIcons icon={icon} size={size} color={color} weight={weight} className={iconClassName} />
   );
 
   return (

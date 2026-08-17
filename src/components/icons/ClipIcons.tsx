@@ -93,6 +93,7 @@ import {
   TrendDownIcon,
   DesktopIcon,
   DeviceTabletIcon,
+  PlayIcon,
 } from '@phosphor-icons/react';
 
 const icons = {
@@ -189,6 +190,7 @@ const icons = {
   TrendDownIcon,
   DesktopIcon,
   DeviceTabletIcon,
+  PlayIcon,
 } satisfies Record<string, Icon>;
 
 export type IconType = keyof typeof icons;
