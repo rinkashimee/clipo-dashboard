@@ -93,6 +93,34 @@ export default function StatusBadge({
       icon: 'CheckIcon',
       iconSize: 13.5,
     },
+    video: {
+      label: t('common.video'),
+      textColor: 'primary500',
+      className: 'bg-[var(--primary-100)]',
+      icon: 'VideoCameraIcon',
+      iconSize: 13.5,
+    },
+    export: {
+      label: t('common.export'),
+      textColor: 'success500',
+      className: 'bg-[var(--success-100)]',
+      icon: 'FileTextIcon',
+      iconSize: 13.5,
+    },
+    asset: {
+      label: t('common.asset'),
+      textColor: 'info500',
+      className: 'bg-[var(--info-100)]',
+      icon: 'FileTextIcon',
+      iconSize: 13.5,
+    },
+    others: {
+      label: t('common.others'),
+      textColor: 'neutral500',
+      className: 'bg-[var(--neutral-100)]',
+      icon: 'FolderSimpleIcon',
+      iconSize: 13.5,
+    },
   };
 
   const config = statusConfig[status];

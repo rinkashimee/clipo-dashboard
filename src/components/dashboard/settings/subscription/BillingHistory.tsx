@@ -27,6 +27,7 @@ export default function BillingHistory() {
       </div>
 
       <Table
+        hideTableBorder={true}
         tableWrapperClassName=" xl:h-[150px] 2xl:h-[170px] mt-2 "
         tableHeaderClassName="xl:px-8 xl:py-1 2xl:px-8 2xl:py-1.5"
         tableColumnClassName="xl:px-8 xl:py-1 2xl:px-8 2xl:py-1.5"

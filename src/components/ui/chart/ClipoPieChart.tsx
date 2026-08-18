@@ -9,6 +9,8 @@ interface ClipoPieChartProps {
   outerRadius?: number;
   paddingAngle?: number;
   showLabel?: boolean;
+  usage?: string;
+  total?: string;
 }
 
 export default function ClipoPieChart(props: ClipoPieChartProps) {
@@ -18,6 +20,8 @@ export default function ClipoPieChart(props: ClipoPieChartProps) {
     outerRadius = 65,
     paddingAngle = 2,
     showLabel = false,
+    usage,
+    total,
   } = props;
 
   const { t } = useTranslation();
@@ -48,11 +52,11 @@ export default function ClipoPieChart(props: ClipoPieChartProps) {
                 return (
                   <g>
                     <text x={cx} y={cy - 4} textAnchor="middle" className="body-md">
-                      {formatNumber(totalViews)}
+                      {usage ? usage : formatNumber(totalViews)}
                     </text>
 
                     <text x={cx} y={cy + 16} textAnchor="middle" className="caption">
-                      {t('common.total-views')}
+                      {total ? total : t('common.total-views')}
                     </text>
                   </g>
                 );

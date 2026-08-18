@@ -4,7 +4,7 @@ import Tooltip from '@/components/ui/Tooltip';
 import { Typography } from '@/components/ui/Typography';
 import { colors } from '@/lib/colors/colors';
 import type { TableColumn } from '@/types/ClipoCommonTypes';
-import type { BillingTableTypes } from '@/types/SubscriptionTypes';
+import type { BillingTableTypes } from '@/types/SettingTypes';
 import { useTranslation } from 'react-i18next';
 
 export function billingTableColumns(): TableColumn<BillingTableTypes>[] {

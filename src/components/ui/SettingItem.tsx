@@ -2,6 +2,7 @@ import { type Color } from '@/lib/colors/colors';
 import { ClipIcons, type IconType } from '../icons/ClipIcons';
 import { Typography } from './Typography';
 import type { ReactNode } from 'react';
+import clsx from 'clsx';
 
 interface SettingItemProps {
   size?: number;
@@ -14,6 +15,7 @@ interface SettingItemProps {
   hidden?: boolean;
   hideIcon?: boolean;
   customLeftItem?: ReactNode;
+  className?: string;
 }
 
 export default function SettingItem(props: SettingItemProps) {
@@ -27,9 +29,10 @@ export default function SettingItem(props: SettingItemProps) {
     hidden,
     hideIcon,
     customLeftItem,
+    className,
   } = props;
   return (
-    <div className="flex items-center justify-between" hidden={hidden}>
+    <div className={clsx(`flex items-center justify-between ${className}`)} hidden={hidden}>
       <div className="flex items-center gap-3 py-1.5">
         {customLeftItem
           ? customLeftItem

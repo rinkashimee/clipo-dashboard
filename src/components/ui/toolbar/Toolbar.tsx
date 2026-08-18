@@ -41,6 +41,8 @@ export default function Toolbar(props: ToolbarProps) {
           color={dropdown.color}
           showIcon={dropdown.showIcon}
           showTooltip={dropdown.showTooltip}
+          isFilter={dropdown.isFilter}
+          isFilterIcon={dropdown.isFilterIcon}
           items={dropdown.dropdownData}
           value={dropdown.dropdownValue}
           width={dropdown.dropdownWidth ?? 132}

@@ -294,3 +294,11 @@ export const SAVE_LOCATION_OPTIONS: OptionTypes[] = [
   { labelKey: 'common.save-location-format.documents', value: 'documents' },
   { labelKey: 'common.save-location-format.desktop', value: 'desktop' },
 ];
+
+export const FILE_BREAKDOWN_OPTIONS: OptionTypes[] = [
+  { labelKey: 'common.file-breakdown.all', value: 'all' },
+  { labelKey: 'common.file-breakdown.video', value: 'video' },
+  { labelKey: 'common.file-breakdown.export', value: 'export' },
+  { labelKey: 'common.file-breakdown.asset', value: 'asset' },
+  { labelKey: 'common.file-breakdown.others', value: 'others' },
+];

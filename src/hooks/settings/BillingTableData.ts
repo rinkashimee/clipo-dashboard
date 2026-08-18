@@ -1,4 +1,4 @@
-import type { BillingTableTypes } from '@/types/SubscriptionTypes';
+import type { BillingTableTypes } from '@/types/SettingTypes';
 
 export function billingTableData(): BillingTableTypes[] {
   return [

@@ -28,6 +28,8 @@ interface DropdownProps {
   showIcon?: boolean;
   showTooltip?: boolean;
   placement?: 'bottom' | 'top';
+  isFilter?: boolean;
+  isFilterIcon?: IconType;
 }
 
 export default function Dropdown(props: DropdownProps) {
@@ -47,6 +49,8 @@ export default function Dropdown(props: DropdownProps) {
     showIcon = false,
     showTooltip = false,
     placement = 'bottom',
+    isFilter = false,
+    isFilterIcon,
   } = props;
 
   const { t } = useTranslation();
@@ -55,6 +59,8 @@ export default function Dropdown(props: DropdownProps) {
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   const selectedItem = useMemo(() => items.find((item) => item.value === value), [items, value]);
+
+  const shouldShowTooltip = showTooltip && !isFilter;
 
   useDropdownOutsideClick(dropdownRef, () => {
     setOpen(false);
@@ -90,13 +96,13 @@ export default function Dropdown(props: DropdownProps) {
         size={18}
         variant="custom"
         iconPosition="right"
-        icon="CaretDownIcon"
+        icon={isFilterIcon ? isFilterIcon : 'CaretDownIcon'}
         color={colors.neutral500}
         onClick={() => setOpen((prev) => !prev)}
-        iconClassName={clsx('transition-transform', open && 'rotate-180')}
+        iconClassName={clsx('transition-transform', open && !isFilter && 'rotate-180')}
         className={`border-default shadow-default flex h-10 w-full cursor-pointer items-center justify-between rounded-lg bg-white px-4 focus:border-[var(--primary-500)] ${className}`}
       >
-        <div className="flex min-w-0 flex-1 items-center gap-1">
+        <div className="flex min-w-0 flex-1 items-center gap-1" hidden={isFilter}>
           {showIcon && (
             <ClipIcons icon={icon} size={size} color={color} className={iconClassName} />
           )}
@@ -124,14 +130,15 @@ export default function Dropdown(props: DropdownProps) {
       {open && (
         <div
           className={clsx(
-            'border-default shadow-default no-scrollbar absolute z-50 max-h-100 w-full overflow-y-auto rounded-md bg-white',
+            'border-default shadow-default no-scrollbar absolute z-50 max-h-100 overflow-y-auto rounded-md bg-white',
             placement === 'bottom' ? 'top-full mt-1' : 'bottom-full mb-1',
+            isFilter ? 'right-0 min-w-40' : 'w-full',
             listClassName
           )}
         >
           {items.map((item) => (
             <React.Fragment key={item.value}>
-              {showTooltip ? (
+              {shouldShowTooltip ? (
                 <Tooltip title={item.label} className="block w-full">
                   {renderDropdownItem(item)}
                 </Tooltip>

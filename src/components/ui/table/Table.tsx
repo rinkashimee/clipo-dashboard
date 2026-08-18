@@ -10,6 +10,7 @@ interface TableProps<T> {
   tableWrapperClassName?: string;
   tableHeaderClassName?: string;
   tableColumnClassName?: string;
+  hideTableBorder?: boolean;
 }
 
 export default function Table<T>(props: TableProps<T>) {
@@ -21,12 +22,14 @@ export default function Table<T>(props: TableProps<T>) {
     tableWrapperClassName,
     tableHeaderClassName,
     tableColumnClassName,
+    hideTableBorder,
   } = props;
 
   return (
     <div
       className={clsx(
-        'border-default shadow-default flex flex-col overflow-hidden rounded-lg bg-white',
+        'flex flex-col overflow-hidden bg-white',
+        !hideTableBorder && 'border-default shadow-default rounded-lg',
         tableWrapperClassName
       )}
     >

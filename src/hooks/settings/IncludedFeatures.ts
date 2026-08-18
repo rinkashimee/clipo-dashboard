@@ -1,5 +1,5 @@
 import { ProPlanFeature } from '@/data/AccountInfo';
-import type { IncludedFeaturesTypes } from '@/types/SubscriptionTypes';
+import type { IncludedFeaturesTypes } from '@/types/SettingTypes';
 import { useTranslation } from 'react-i18next';
 
 export function includedFeaturesData(): IncludedFeaturesTypes[] {

@@ -1,4 +1,6 @@
 import type { IconType } from '@/components/icons/ClipIcons';
+import type { StatusBadgeTypes } from './ClipoCommonTypes';
+import type { ParseKeys } from 'i18next';
 
 export interface SettingFilterTypes {
   language?: string;
@@ -45,4 +47,31 @@ export interface ExportPresetTypes {
   quality: string;
   icon: IconType;
   iconColor: string;
+}
+
+export interface BillingTableTypes {
+  invoice: string;
+  date: string;
+  amount: string;
+  status: StatusBadgeTypes;
+}
+
+export interface IncludedFeaturesTypes {
+  id: string;
+  icon: IconType;
+  label: string;
+  caption: string;
+}
+
+export interface FileTableTypes {
+  id: string;
+  name: string;
+  type: StatusBadgeTypes;
+  size: string;
+  lastModified: string;
+}
+
+export interface TipsTypes {
+  key: string;
+  tip: ParseKeys;
 }

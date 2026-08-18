@@ -18,7 +18,7 @@ export default function GenderChart({ dateFilter }: GenderChartProps) {
   return (
     <div className="border-default shadow-default rounded-xl border bg-white px-4 xl:py-2 2xl:py-3">
       <Typography variant="body-sm" color="neutral900" cursor="default">
-        {t('analytics.top-device')}
+        {t('analytics.gender')}
       </Typography>
 
       <div className="mt-1 flex items-center justify-between 2xl:px-5">

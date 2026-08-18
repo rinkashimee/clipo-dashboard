@@ -11,7 +11,11 @@ export type StatusBadgeTypes =
   | 'completed'
   | 'paid'
   | 'pending'
-  | 'default';
+  | 'default'
+  | 'video'
+  | 'export'
+  | 'asset'
+  | 'others';
 
 export type FormatBadgeTypes = 'mp4' | 'mov';
 
@@ -60,6 +64,8 @@ export type DropdownFilterTypes = {
   color?: string;
   showIcon?: boolean;
   showTooltip?: boolean;
+  isFilter?: boolean;
+  isFilterIcon?: IconType;
   dropdownData: OptionTypes[];
   dropdownValue: string;
   dropdownWidth?: number;

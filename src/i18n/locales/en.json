@@ -66,6 +66,9 @@
     "view": "View",
     "update": "Update",
     "default": "Default",
+    "video": "Video",
+    "asset": "Asset",
+    "others": "Others",
     "invoices": "View All Invoices",
     "re-export": "Re-export",
     "active": "Active",
@@ -73,12 +76,15 @@
     "manage-storage": "Manage Storage",
     "delete-account": "Delete Account",
     "upgrade-plan": "Upgrade Plan",
+    "upgrade-storage": "Upgrade Storage",
+    "view-trash": "View Trash",
     "cancel-sub": "Cancel Subscription",
     "new-payment-method": "Add New Payment Method",
     "min-process": "Minutes Processed",
     "exports": "Exports",
     "storage": "Storage",
     "add-preset": "Add Preset",
+    "percent": "{{value}}%",
     "sub-plan": {
       "plan": "{{plan}}",
       "price": "${{price}}",
@@ -89,6 +95,9 @@
     "table-title": {
       "video": "Video",
       "clip": "Clip",
+      "name": "Name",
+      "type": "Type",
+      "lastModified": "Last Modified",
       "project": "Project",
       "format": "Format",
       "resolution": "Resolution",
@@ -258,6 +267,13 @@
       "downloads": "Downloads",
       "documents": "Documents",
       "desktop": "Desktop"
+    },
+    "file-breakdown": {
+      "all": "All Files",
+      "video": "Video",
+      "export": "Export",
+      "asset": "Asset",
+      "others": "Others"
     }
   },
   "overview": {
@@ -345,6 +361,7 @@
     "new-audience": "New Audience",
     "top-countries": "Top Countries",
     "top-device": "Top Device",
+    "gender": "Gender",
     "prev-period": "Previous Period"
   },
   "templates": {
@@ -538,6 +555,42 @@
     "export-presets": {
       "title": "Export Presets",
       "caption": "Create and manage presets for different platforms."
+    },
+    "storage-usage-setting": {
+      "title": "Storage Usage",
+      "usage": "{{usage}} GB",
+      "total": "of {{total}} GB used"
+    },
+    "file-breakdown": {
+      "title": "File Breakdown",
+      "search-bar": "Search files...",
+      "files": "files"
+    },
+    "quick-actions": {
+      "title": "Quick Actions",
+      "manage-files": "Manage Large Files",
+      "review": "Review and remove large files",
+      "empty-trash": "Empty Trash",
+      "free-space": "Free up space from deleted items",
+      "transfer": "Transfer Projects",
+      "move-projects": "Move projects to reduce usage"
+    },
+    "storage-plan": {
+      "title": "Storage Plan",
+      "total-storage": "{{total}} GB total storage",
+      "suggestions": "Need more space? \nUpgrade your plan to get more storage and keep your projects safe."
+    },
+    "trash": {
+      "title": "Trash",
+      "description": "Deleted items move to trash and are permanently remove after 30 days.",
+      "usage": "{{usage}} MB"
+    },
+    "storage-tips": {
+      "title": "Storage Tips",
+      "learn-more": "Learn more about storage",
+      "tips1": "Delete unused exports and drafts",
+      "tips2": "Compress large video files",
+      "tips3": "Move old projects to external storage"
     }
   }
 }

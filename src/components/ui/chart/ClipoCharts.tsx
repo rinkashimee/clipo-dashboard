@@ -25,6 +25,8 @@ interface ClipoChartProps {
   outerRadius?: number;
   paddingAngle?: number;
   showLabel?: boolean;
+  usage?: string;
+  total?: string;
 }
 
 export default function ClipoCharts(props: ClipoChartProps) {
@@ -39,6 +41,8 @@ export default function ClipoCharts(props: ClipoChartProps) {
     innerRadius,
     outerRadius,
     paddingAngle,
+    usage,
+    total,
     formatter,
     tickFormatter,
     labelFormatter,
@@ -68,6 +72,8 @@ export default function ClipoCharts(props: ClipoChartProps) {
             innerRadius={innerRadius}
             outerRadius={outerRadius}
             paddingAngle={paddingAngle}
+            total={total}
+            usage={usage}
           />
         );
 
