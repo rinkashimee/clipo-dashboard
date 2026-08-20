@@ -70,6 +70,7 @@
     "asset": "Asset",
     "others": "Others",
     "invoices": "View All Invoices",
+    "set-all": "Set all",
     "re-export": "Re-export",
     "active": "Active",
     "manage-sub": "Manage Subscription",
@@ -591,6 +592,64 @@
       "tips1": "Delete unused exports and drafts",
       "tips2": "Compress large video files",
       "tips3": "Move old projects to external storage"
+    },
+    "notif-channels": {
+      "title": "Notification Channels",
+      "desc": "Choose where you want to receive notifications.",
+      "email-notif": "Email Notifications",
+      "receive-notif": "Receive notifications via email",
+      "push-notif": "Push Notifications",
+      "browser-notif": "Receive notifications in your browser"
+    },
+    "notif-preferences": {
+      "title": "Notification Preferences",
+      "desc": "Choose which updates you want to receive.",
+      "proj-process": "Project & Processing",
+      "project-updates": "Project updates",
+      "get-notified": "Get notified when your project status changes",
+      "processing-complete": "Processing complete",
+      "process-notif": "Get notified when video processing is complete",
+      "processing-failed": "Processing failed",
+      "process-fail": "Get notified when processing fails",
+      "epxorts": "Exports",
+      "export-complete": "Export completed",
+      "export-notif-complete": "Get notified when your export is ready",
+      "export-failed": "Export failed",
+      "export-notif-fail": "Get notified when export fails",
+      "system-account": "System Account",
+      "product-updates": "Product updates",
+      "important-updates": "Important updates and new features",
+      "billing-paymnent": "Billing & payments",
+      "subs-updates": "Invoices, payments and updates",
+      "security-alerts": "Security alerts",
+      "security-notif": "Login alerts and security-related notifications"
+    },
+    "recent-notif": {
+      "title": "Recent Notifications",
+      "notif1": "Export completed",
+      "notifcaption1": "Your video “AI Tools for Creators” has been exported.",
+      "notif2": "Processing complete",
+      "notifcaption2": "Project “How I Built My SaaS” is ready.",
+      "notif3": "Project updated",
+      "notifcaption3": "You made changes to “Podcast Highlights”.",
+      "notif4": "Upcoming invoice",
+      "notifcaption4": "Your Pro Plan invoice is due soon.",
+      "notif5": "New feature",
+      "notifcaption5": "Auto captions in 30+ languages are now available."
+    },
+    "quiet-hour": {
+      "title": "Quiet Hours",
+      "desc": "Pause non-critical notifications.",
+      "start-time": "Start time",
+      "end-time": "End time",
+      "time-zone": "Time zone"
+    },
+    "delivery-summary": {
+      "title": "Delivery Summary",
+      "desc": "Here’s how you’re currently set up to receive notifications.",
+      "email": "Email",
+      "push": "Push",
+      "browser": "This browser"
     }
   }
 }

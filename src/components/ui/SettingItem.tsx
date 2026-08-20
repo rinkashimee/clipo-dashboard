@@ -1,13 +1,14 @@
-import { type Color } from '@/lib/colors/colors';
+import { colors } from '@/lib/colors/colors';
 import { ClipIcons, type IconType } from '../icons/ClipIcons';
 import { Typography } from './Typography';
 import type { ReactNode } from 'react';
 import clsx from 'clsx';
 
 interface SettingItemProps {
+  id?: string | number;
   size?: number;
   icon?: IconType;
-  iconColor?: Color;
+  iconColor?: string;
 
   label: string;
   caption: string;
@@ -16,13 +17,16 @@ interface SettingItemProps {
   hideIcon?: boolean;
   customLeftItem?: ReactNode;
   className?: string;
+  showIconBackground?: boolean;
+  iconBackgroundColor?: string;
 }
 
 export default function SettingItem(props: SettingItemProps) {
   const {
+    id,
     size = 18,
     icon = 'CameraIcon',
-    iconColor = 'neutral500',
+    iconColor,
     label,
     caption,
     children,
@@ -30,26 +34,44 @@ export default function SettingItem(props: SettingItemProps) {
     hideIcon,
     customLeftItem,
     className,
+    showIconBackground,
+    iconBackgroundColor = colors.primary50,
   } = props;
-  return (
-    <div className={clsx(`flex items-center justify-between ${className}`)} hidden={hidden}>
-      <div className="flex items-center gap-3 py-1.5">
-        {customLeftItem
-          ? customLeftItem
-          : !hideIcon && <ClipIcons size={size} icon={icon} color={iconColor} />}
 
-        <div className="flex-1">
+  const renderIcon = () => <ClipIcons size={size} icon={icon} color={iconColor} />;
+
+  return (
+    <div
+      key={id}
+      className={clsx(`flex items-center justify-between gap-6 ${className}`)}
+      hidden={hidden}
+    >
+      <div className="flex min-w-0 items-center gap-3 py-1.5">
+        {customLeftItem ? (
+          customLeftItem
+        ) : !hideIcon && showIconBackground ? (
+          <div
+            className="flex h-10 w-10 items-center justify-center rounded-md"
+            style={{ backgroundColor: iconBackgroundColor }}
+          >
+            {renderIcon()}
+          </div>
+        ) : (
+          <div className="shrink-0">{renderIcon()}</div>
+        )}
+
+        <div className="min-w-0 flex-1">
           <Typography variant="body-sm" cursor="default" color="neutral500">
             {label}
           </Typography>
 
-          <Typography variant="caption" color="neutral400" cursor="default">
+          <Typography variant="caption" color="neutral400" cursor="default" className="truncate">
             {caption}
           </Typography>
         </div>
       </div>
 
-      {children}
+      <div className="shrink-0">{children}</div>
     </div>
   );
 }

@@ -36,6 +36,20 @@ export interface SettingFilterTypes {
   fileNameFormat?: string;
   saveLocation?: string;
   addWaterMark?: boolean;
+  emailNotif?: boolean;
+  pushNotif?: boolean;
+  projectUpdate?: boolean;
+  processComplete?: boolean;
+  processFail?: boolean;
+  exportComplete?: boolean;
+  exportFail?: boolean;
+  productUpdates?: boolean;
+  biling?: boolean;
+  security?: boolean;
+  quietHour?: boolean;
+  startTime?: string;
+  endTime?: string;
+  timezone?: string;
 }
 
 export interface ExportPresetTypes {
@@ -74,4 +88,13 @@ export interface FileTableTypes {
 export interface TipsTypes {
   key: string;
   tip: ParseKeys;
+}
+
+export interface RecentNotificationsTypes {
+  id: string;
+  type: string;
+  title: ParseKeys;
+  description: ParseKeys;
+  time: string;
+  icon: IconType;
 }

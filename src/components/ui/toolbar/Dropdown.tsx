@@ -91,7 +91,7 @@ export default function Dropdown(props: DropdownProps) {
   );
 
   return (
-    <div ref={dropdownRef} className="relative" style={{ width: width }}>
+    <div ref={dropdownRef} className="relative" style={{ width: width ?? 'auto' }}>
       <Button
         size={18}
         variant="custom"
