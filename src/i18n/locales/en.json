@@ -76,6 +76,7 @@
     "manage-sub": "Manage Subscription",
     "manage-storage": "Manage Storage",
     "delete-account": "Delete Account",
+    "logout-sessions": "Log Out All Other Sessions",
     "upgrade-plan": "Upgrade Plan",
     "upgrade-storage": "Upgrade Storage",
     "view-trash": "View Trash",
@@ -86,6 +87,9 @@
     "storage": "Storage",
     "add-preset": "Add Preset",
     "percent": "{{value}}%",
+    "strong": "Strong",
+    "manage-all": "Manage all",
+    "current": "Current",
     "sub-plan": {
       "plan": "{{plan}}",
       "price": "${{price}}",
@@ -650,6 +654,65 @@
       "email": "Email",
       "push": "Push",
       "browser": "This browser"
+    },
+    "security": {
+      "title": "Security Score",
+      "great-job": "Great job! Your account security is strong.",
+      "strong-pass": "Strong password",
+      "two-factor": "Two-factor authentication enabled",
+      "compromised": "No compromised data found",
+      "review": "Review your active sessions"
+    },
+    "password": {
+      "title": "Password",
+      "desc": "Choose a strong password and update it regularly.",
+      "change-pass": "Change Password",
+      "pass-strength": "Password Strength",
+      "last-changed": "Last changed on {{date}}",
+      "use-pass": "Use a mix of letters, number, and symbols."
+    },
+    "two-factor": {
+      "title": "Two-Factor Authentication (2FA)",
+      "desc": "Add an extra layer of security to protect your account.",
+      "auth-app": "Authenticator App",
+      "use-google-auth": "Use an authentication app like Google AuthN or Authy.",
+      "codes": "View Backup Codes",
+      "sms-auth": "SMS Authentication",
+      "receive-verification": "Receive verification codes via SMS."
+    },
+    "security-alerts": {
+      "title": "Security Settings",
+      "login-alert": "Login alerts",
+      "new-sign-in": "Get notified about new sign-ins to your account",
+      "email-alert": "Email alerts",
+      "receive-security": "Receive security alerts and important updates",
+      "device-login": "Device login approval",
+      "review-new-device": "Review new devices before they can access your account"
+    },
+    "recent-security": {
+      "title": "Recent Security Activity",
+      "activity1": "New sign-in",
+      "activity-caption1": "Chrome on Windows • New York, United States",
+      "activity2": "Two-factor enabled",
+      "activity-caption2": "Authenticator app",
+      "activity3": "Password changed",
+      "activity-caption3": "Password was successfully updated",
+      "activity4": "New sign-in",
+      "activity-caption4": "Safari on iPhone • New York, United States",
+      "activity5": "Backup codes generated",
+      "activity-caption5": "10 new backup codes generated"
+    },
+    "active-sessions": {
+      "title": "Active Sessions",
+      "desc": "You’re currently signed in on these devices.",
+      "device1": "Windows • Chrome",
+      "device1-ip": "New York, US • IP 192.168.1.10",
+      "device2": "iPhone • Safari",
+      "device2-ip": "New York, US • IP 103.241.45.67",
+      "device3": "MacBook Pro • Chrome",
+      "device3-ip": "New York, US • IP 106.51.23.19",
+      "device4": "Android • Chrome",
+      "device4-ip": "New York, US • IP 110.235.78.90"
     }
   }
 }

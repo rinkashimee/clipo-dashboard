@@ -50,6 +50,11 @@ export interface SettingFilterTypes {
   startTime?: string;
   endTime?: string;
   timezone?: string;
+  twoFactor?: boolean;
+  sms?: boolean;
+  loginAlert?: boolean;
+  emailAlert?: boolean;
+  deviceLogin?: boolean;
 }
 
 export interface ExportPresetTypes {
@@ -91,6 +96,22 @@ export interface TipsTypes {
 }
 
 export interface RecentNotificationsTypes {
+  id: string;
+  type: string;
+  title: ParseKeys;
+  description: ParseKeys;
+  time: string;
+  icon: IconType;
+}
+
+export interface SecurityCheckTypes {
+  id: string;
+  value: ParseKeys;
+  color: string;
+  icon: IconType;
+}
+
+export interface ActiveSessionTypes {
   id: string;
   type: string;
   title: ParseKeys;

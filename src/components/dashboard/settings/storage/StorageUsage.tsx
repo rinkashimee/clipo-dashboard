@@ -43,7 +43,7 @@ export default function StorageUsage() {
             </div>
 
             <div className="mt-2 flex flex-1 items-center gap-4">
-              <div className="h-1.5 flex-1 rounded-full bg-neutral-100">
+              <div className="h-2 flex-1 rounded-full bg-neutral-100">
                 <div
                   className="h-full rounded-full bg-[var(--primary-500)]"
                   style={{

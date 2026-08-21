@@ -2,18 +2,18 @@ import { Button } from '@/components/ui/Button';
 import SettingCard from '@/components/ui/SettingCard';
 import SettingItem from '@/components/ui/SettingItem';
 import { Typography } from '@/components/ui/Typography';
-import { RECENT_NOTIFICATIONS } from '@/data/NotificationSettings';
+import { RECENT_SECURITY_ACTIVITY } from '@/data/SecuritySettings';
 import { colors } from '@/lib/colors/colors';
 import { useTranslation } from 'react-i18next';
 
-export default function RecentNotifications() {
+export default function RecentSecurityActivity() {
   const { t } = useTranslation();
 
   return (
-    <SettingCard className="px-6 xl:py-4 2xl:py-6">
+    <SettingCard className="px-5 xl:py-3 2xl:py-5">
       <div className="flex items-center justify-between">
         <Typography as="span" variant="body-md" color="neutral900" cursor="default">
-          {t('settings.recent-notif.title')}
+          {t('settings.recent-security.title')}
         </Typography>
 
         <Button
@@ -27,25 +27,25 @@ export default function RecentNotifications() {
       </div>
 
       <div className="mt-1">
-        {RECENT_NOTIFICATIONS.map((data) => {
+        {RECENT_SECURITY_ACTIVITY.map((data) => {
           return (
             <SettingItem
               key={data.id}
               icon={data.icon}
               showIconBackground={true}
               iconColor={
-                data.type === 'invoice'
-                  ? colors.warning500
-                  : data.type === 'export'
-                    ? colors.success500
-                    : colors.primary500
+                data.type === 'password'
+                  ? colors.info500
+                  : data.type === 'backup'
+                    ? colors.primary500
+                    : colors.success500
               }
               iconBackgroundColor={
-                data.type === 'invoice'
-                  ? colors.warning50
-                  : data.type === 'export'
-                    ? colors.success50
-                    : colors.primary50
+                data.type === 'password'
+                  ? colors.info50
+                  : data.type === 'backup'
+                    ? colors.primary50
+                    : colors.success50
               }
               className="hover:bg-neutral-50"
               label={t(data.title)}
