@@ -250,6 +250,12 @@ html {
     background: rgba(145, 148, 157, 0.2);
   }
 
+  .divider.vertical {
+    width: 1px;
+    height: auto;
+    align-self: stretch;
+  }
+
   @keyframes marquee {
     from {
       transform: translateX(0);

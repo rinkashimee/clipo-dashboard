@@ -49,7 +49,7 @@ export default function SettingItem(props: SettingItemProps) {
       <div className="flex min-w-0 items-center gap-3 py-1.5">
         {customLeftItem ? (
           customLeftItem
-        ) : !hideIcon && showIconBackground ? (
+        ) : hideIcon ? null : showIconBackground ? (
           <div
             className="flex h-10 w-10 items-center justify-center rounded-md"
             style={{ backgroundColor: iconBackgroundColor }}

@@ -85,11 +85,21 @@
     "min-process": "Minutes Processed",
     "exports": "Exports",
     "storage": "Storage",
+    "projects": "Projects",
+    "ai-minutes": "AI Minutes",
+    "unlimited": "Unlimited",
     "add-preset": "Add Preset",
+    "add": "Add",
     "percent": "{{value}}%",
     "strong": "Strong",
     "manage-all": "Manage all",
+    "manage-plan": "Manage Plan",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
     "current": "Current",
+    "billed-monthly": "Billed every month",
+    "billed-yearly": "Billed every year",
+    "discount": "Save {{discount}}",
     "sub-plan": {
       "plan": "{{plan}}",
       "price": "${{price}}",
@@ -452,13 +462,16 @@
     },
     "current-plan": {
       "plan": "Current Plan",
-      "plan-includes": "Your Plan Includes"
+      "plan-includes": "Your Plan Includes",
+      "billed": "Billed monthly • Cancel anytime",
+      "next-billed": "Next billing on"
     },
     "usage": {
       "title": "Usage"
     },
     "billing-history": {
-      "bill-history": "Billing History"
+      "bill-history": "Billing History",
+      "billing-invoice": "Invoice #{{invoice}}"
     },
     "included-features": {
       "title": "Included Features"
@@ -713,6 +726,38 @@
       "device3-ip": "New York, US • IP 106.51.23.19",
       "device4": "Android • Chrome",
       "device4-ip": "New York, US • IP 110.235.78.90"
+    },
+    "usage-this-month": {
+      "title": "Usage This Month",
+      "reset": "Reset on {{date}}",
+      "ai-mins": "{{used}} / {{total}} mins",
+      "exports/project": "{{used}} / {{total}}",
+      "storage": "{{used}} GB / {{total}} GB",
+      "view-detailed-usage": "View detailed usage"
+    },
+    "billing-frequency": {
+      "title": "Billing Frequency",
+      "desc": "Choose how often you want to be billed",
+      "price-monthly": "{{price}} / month",
+      "price-yearly": "{{price}} / year"
+    },
+    "add-ons": {
+      "title": "Available Add-ons",
+      "desc": "Supercharge your plan with additional minutes and storage",
+      "ai-pack": "AI Minutes Pack",
+      "add-ai-mins": "Add 500 more AI minutes",
+      "storage-pack": "Storage Pack",
+      "add-storage": "Add 100 GB of storage",
+      "pack-price": "{{price}} / pack",
+      "custom-plan": "Need a custom plan?",
+      "contact-sales": "Contact Sales"
+    },
+    "invoice-actions": {
+      "title": "Invoice Actions",
+      "download-invoice": "Download Invoices",
+      "pdf-format": "Download all your invoices in PDF format",
+      "update-billing": "Update Billing Info",
+      "billing-details": "Update your company and billing details"
     }
   }
 }

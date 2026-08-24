@@ -1,4 +1,5 @@
 import AccountSettings from '@/components/dashboard/settings/accounts/AccountSettings';
+import BillingSettings from '@/components/dashboard/settings/billing/BillingSettings';
 import ExportSettings from '@/components/dashboard/settings/export-settings/ExportSettings';
 import NotificationSettings from '@/components/dashboard/settings/notifications/NotificationSettings';
 import PreferenceSettings from '@/components/dashboard/settings/preferences/PreferenceSettings';
@@ -37,7 +38,7 @@ export default function AppRoutes() {
           <Route path="storage" element={<StorageSettings />} />
           <Route path="notifications" element={<NotificationSettings />} />
           <Route path="security" element={<SecuritySettings />} />
-          <Route path="billing" element={<AccountSettings />} />
+          <Route path="billing" element={<BillingSettings />} />
         </Route>
       </Route>
     </Routes>

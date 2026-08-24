@@ -18,7 +18,7 @@ export default function PaymentMethod() {
 
         <Button
           variant="custom"
-          className="flex cursor-pointer items-center justify-center rounded-lg bg-white px-4.5 py-1.5 transition-colors hover:bg-[var(--primary-50)]"
+          className="flex cursor-pointer items-center justify-center rounded-md bg-white px-4.5 py-1.5 transition-colors hover:bg-[var(--primary-50)]"
         >
           <Typography as="span" variant="body-sm" color="primary500" cursor="pointer">
             {t('common.update')}

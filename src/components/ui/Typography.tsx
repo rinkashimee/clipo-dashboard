@@ -22,6 +22,7 @@ interface TypographyProps {
   children: ReactNode;
   className?: string;
   cursor?: TypographyCursor;
+  hidden?: boolean;
 }
 
 export function Typography(props: TypographyProps) {
@@ -32,10 +33,12 @@ export function Typography(props: TypographyProps) {
     color = 'white',
     children,
     className,
+    hidden,
   } = props;
 
   return (
     <Component
+      hidden={hidden}
       style={{ color: colors[color] }}
       className={clsx(
         {

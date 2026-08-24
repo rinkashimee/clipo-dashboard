@@ -119,3 +119,21 @@ export interface ActiveSessionTypes {
   time: string;
   icon: IconType;
 }
+
+export interface UsageDataTypes {
+  id: string;
+  label: ParseKeys;
+  used: number;
+  total: number;
+  percentage: string;
+  status: string;
+  icon: IconType;
+}
+
+export interface BillingFrequencyTypes {
+  id: string;
+  label: ParseKeys;
+  price: string;
+  description: ParseKeys;
+  discount: string;
+}
