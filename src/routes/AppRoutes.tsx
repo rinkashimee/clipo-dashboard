@@ -6,6 +6,8 @@ import PreferenceSettings from '@/components/dashboard/settings/preferences/Pref
 import SecuritySettings from '@/components/dashboard/settings/security/SecuritySettings';
 import StorageSettings from '@/components/dashboard/settings/storage/StorageSettings';
 import SubscriptionSettings from '@/components/dashboard/settings/subscription/SubscriptionSettings';
+import UnsupportedScreen from '@/components/ui/UnsupportedScreen';
+import { useScreenSize } from '@/hooks/UseScreenSize';
 import DashboardLayout from '@/layouts/DashboardLayout';
 import Analytics from '@/pages/dashboard/Analytics';
 import ClipResults from '@/pages/dashboard/ClipResults';
@@ -17,6 +19,12 @@ import Templates from '@/pages/dashboard/Templates';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 export default function AppRoutes() {
+  const isSupported = useScreenSize();
+
+  if (!isSupported) {
+    return <UnsupportedScreen />;
+  }
+
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/overview" replace />} />

@@ -289,6 +289,14 @@
       "export": "Export",
       "asset": "Asset",
       "others": "Others"
+    },
+    "unsupported": {
+      "title": "Screen size not supported",
+      "desc": "Clipo AI is optimized for desktop screens with a minimum width of 1440px. Please resize your browser window or use a larger screen to continue.",
+      "need-help": "Need help?",
+      "contact-supp": "Contact Support",
+      "width-req": "Minimum width required: {{width}}px",
+      "current-width": "Your current width: {{width}}px"
     }
   },
   "overview": {
