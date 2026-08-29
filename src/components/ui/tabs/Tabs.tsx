@@ -1,4 +1,3 @@
-import { colors } from '@/lib/colors/colors';
 import type { TabItemTypes } from '@/types/ClipoCommonTypes';
 import clsx from 'clsx';
 import { Button } from '../Button';
